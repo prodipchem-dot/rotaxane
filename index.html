@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leigh Group | Molecular Magic at Manchester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple: #660099;
+            --brand-gold: #ffcc00;
+            --brand-slate: #020617;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #020617;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass {
+            background: rgba(102, 0, 153, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(102, 0, 153, 0.2);
+        }
+        .text-glow-purple {
+            text-shadow: 0 0 20px rgba(102, 0, 153, 0.5);
+        }
+        .bg-purple-gradient {
+            background: radial-gradient(circle at center, #2e0044 0%, #020617 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #31004a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #660099; }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react/": "https://esm.sh/react@18.2.0/",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+        "lucide-react": "https://esm.sh/lucide-react@0.263.1?external=react",
+        "@google/genai": "https://esm.sh/@google/genai@1.40.0",
+        "d3": "https://esm.sh/d3@7.8.5"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-slate-200">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
