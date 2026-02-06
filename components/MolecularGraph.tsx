@@ -21,6 +21,7 @@ const MolecularGraph: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
+    // Return early if no SVG element, returning void which is valid for EffectCallback
     if (!svgRef.current) return;
 
     const width = 800;
@@ -109,7 +110,11 @@ const MolecularGraph: React.FC = () => {
       event.subject.fy = null;
     }
 
-    return () => simulation.stop();
+    // Fix: The cleanup function must return void. 
+    // d3.Simulation.stop() returns the simulation itself, so we wrap it in a block to return void.
+    return () => {
+      simulation.stop();
+    };
   }, []);
 
   return (

@@ -58,11 +58,14 @@ const App: React.FC = () => {
       <main className="flex-grow">
         {/* SHARED HEADER LOGOS */}
         <section className="pt-28 pb-6 container mx-auto px-6 flex flex-wrap justify-between items-center gap-8">
-           <div className="flex gap-6 items-center">
+           <div className="flex gap-6 items-center flex-wrap">
              <a href="https://www.ucl.ac.uk/sustainable/take-action/staff-action/leaf-laboratory-efficiency-assessment-framework" target="_blank" rel="noreferrer">
                <img src="https://www.catenane.net/images/Leaflogo.jpg" alt="LEAF Logo" className="h-16 rounded-lg shadow-lg hover:scale-105 transition-transform" />
              </a>
-             <div className="h-12 w-px bg-purple-500/20"></div>
+             <a href="https://www.catenane.net/pages/video_CAMERA_motor.html" target="_blank" rel="noreferrer">
+               <img src="https://www.catenane.net/images/CAMERA_banner.jpg" alt="CAMERA Banner" className="h-16 rounded-lg shadow-lg hover:scale-105 transition-transform" />
+             </a>
+             <div className="h-12 w-px bg-purple-500/20 hidden md:block"></div>
              <a href="http://www.chemistry.manchester.ac.uk/" target="_blank" rel="noreferrer">
                <img src="https://www.catenane.net/images/UoM_logo.png" alt="University of Manchester" className="h-14 brightness-0 invert opacity-80" />
              </a>
