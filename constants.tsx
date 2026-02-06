@@ -60,24 +60,28 @@ export interface TeamMember {
 }
 
 export const MANCHESTER_TEAM: TeamMember[] = [
-  { name: "Adam Lehchilli", grad: "MSci, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Adam.jpg" },
-  { name: "Alex Betts", grad: "MChem, University of Aberdeen, UK", img: "https://www.catenane.net/images/current_members/AlexB.jpg" },
-  { name: "Axel Troncossi", grad: "MChem, Wageningen University, Netherlands", img: "https://www.catenane.net/images/current_members/axelt.jpg" },
-  { name: "Chuan Gao", grad: "PhD, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Chuan.jpg" },
-  { name: "Daniel Lucas Pinho Feitosa Couto", grad: "MSci, PSL University, France", img: "https://www.catenane.net/images/current_members/Daniel%20Lucas.jpg" },
-  { name: "Dr Daniel Tetlow", grad: "PhD, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/dan_web2.jpg" },
-  { name: "Emily Cramp", grad: "MSci, University of Birmingham, UK", img: "https://www.catenane.net/images/current_members/Emily.jpg" },
-  { name: "Dr Félix Hernández Culebras", grad: "PhD, Polymat, Spain", img: "https://www.catenane.net/images/current_members/Felix.jpg" },
-  { name: "Dr Huakui Liu", grad: "PhD, SIOC, China", img: "https://www.catenane.net/images/current_members/Huakui.jpg" },
-  { name: "Jannik Lion Schiessl", grad: "MSci, Uni Ulm, Germany", img: "https://www.catenane.net/images/current_members/Jannic.jpg" },
-  { name: "Jessica Whittingham", grad: "MChem, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/JessicaW.jpg" },
-  { name: "Joaquin Baixeras Buye", grad: "MSci, University of Cambridge, UK", img: "https://www.catenane.net/images/current_members/Quim.jpg" },
-  { name: "Linfeng Tan", grad: "MSc, Fudan University, China", img: "https://www.catenane.net/images/current_members/Linfeng.jpg" },
-  { name: "Lukas Marrow", grad: "MChem, University of Oxford, UK", img: "https://www.catenane.net/images/current_members/Lukas.jpg" },
-  { name: "Maria-Carmen Temian", grad: "MChem, University of Oxford, UK", img: "https://www.catenane.net/images/current_members/Maria.jpg" },
-  { name: "Dr Prodip Howlader", grad: "PhD, IISc Bangalore, India", img: "https://www.catenane.net/images/current_members/Prodip.jpg" },
-  { name: "Valerie Bruyr", grad: "Research Technician", img: "https://www.catenane.net/images/current_members/valerie.jpg" },
-  { name: "Lab Monkey", grad: "Honorary Researcher", img: "https://www.catenane.net/images/current_members/labmonkey.jpg" }
+  { name: "Adam Lehchilli", grad: "MSci, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Adam.jpg", email: "adam.lehchilli@postgrad.manchester.ac.uk" },
+  { name: "Alex Betts", grad: "MChem, University of Aberdeen, UK", img: "https://www.catenane.net/images/current_members/AlexB.jpg", email: "alexander.betts@postgrad.manchester.ac.uk" },
+  { name: "Axel Troncossi", grad: "MChem, Wageningen University & Research, Netherlands", img: "https://www.catenane.net/images/current_members/axelt.jpg", email: "axel.troncossi@postgrad.manchester.ac.uk" },
+  { name: "Chuan Gao", grad: "PhD, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Chuan.jpg", email: "chuan.gao@manchester.ac.uk" },
+  { name: "Daniel Lucas Pinho Feitosa Couto", grad: "MSci, PSL University | Chimie ParisTech, France", img: "https://www.catenane.net/images/current_members/Daniel%20Lucas.jpg", email: "danielleucas.pinhofeitosacouto@postgrad.manchester.ac.uk" },
+  { name: "Dr Daniel Tetlow", grad: "PhD, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/dan_web2.jpg", email: "daniel.tetlow@manchester.ac.uk" },
+  { name: "Emily Cramp", grad: "MSci, University of Birmingham, UK", img: "https://www.catenane.net/images/current_members/Emily.jpg", email: "emily.cramp@postgrad.manchester.ac.uk" },
+  { name: "Dr Félix Hernández Culebras", grad: "PhD, Universidad del País Vasco Institute Polymat, Spain", img: "https://www.catenane.net/images/current_members/Felix.jpg", email: "felix.hernandezculebras@manchester.ac.uk" },
+  { name: "Dr Huakui Liu", grad: "PhD, Shanghai Institute of Organic Chemistry, China", img: "https://www.catenane.net/images/current_members/Huakui.jpg", email: "huakui.liu@manchester.ac.uk" },
+  { name: "Jannik Lion Schiessl", grad: "MSci, Uni Ulm, Germany", img: "https://www.catenane.net/images/current_members/Jannic.jpg", email: "jannik.schiessl@postgrad.manchester.ac.uk" },
+  { name: "Jessica Whittingham", grad: "MChem, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/JessicaW.jpg", email: "jessica.whittingham@postgrad.manchester.ac.uk" },
+  { name: "Joaquin Baixeras Buye", grad: "MSci, University of Cambridge, UK", img: "https://www.catenane.net/images/current_members/Quim.jpg", email: "joaquin.baixerasbuye@postgrad.manchester.ac.uk" },
+  { name: "Linfeng Tan", grad: "MSc, Fudan University, China", img: "https://www.catenane.net/images/current_members/Linfeng.jpg", email: "linfeng.tan@postgrad.manchester.ac.uk" },
+  { name: "Lukas Marrow", grad: "MChem, University of Oxford, UK", img: "https://www.catenane.net/images/current_members/Lukas.jpg", email: "lukas.marrow@postgrad.manchester.ac.uk" },
+  { name: "Maria-Carmen Temian", grad: "MChem, University of Oxford, UK", img: "https://www.catenane.net/images/current_members/Maria.jpg", email: "maria-carmen.temian@postgrad.manchester.ac.uk" },
+  { name: "Matthew Carey", grad: "MChem, University of Durham, UK", img: "https://www.catenane.net/images/current_members/Matthew.jpg", email: "matthew.carey@postgrad.manchester.ac.uk" },
+  { name: "Dr Prodip Howlader", grad: "PhD, Indian Institute of Science, Bangalore, India", img: "https://www.catenane.net/images/current_members/Prodip.jpg", email: "prodip.howlader@manchester.ac.uk" },
+  { name: "Dr Qi Lin", grad: "PhD, King's College London, UK", img: "https://www.catenane.net/images/current_members/Qi.jpg", email: "qi.lin@manchester.ac.uk" },
+  { name: "Sibei Liao", grad: "MChem, Huazhong University of Science and Technology, China", img: "https://www.catenane.net/images/current_members/Sibei.jpg", email: "sibei.liao@postgrad.manchester.ac.uk" },
+  { name: "Valerie Bruyr", grad: "Research Technician", img: "https://www.catenane.net/images/current_members/valerie.jpg", email: "valerie.bruyr@manchester.ac.uk" },
+  { name: "Victoria Jiang", grad: "MSc, University of Bristol, UK", img: "https://www.catenane.net/images/current_members/Victoria.jpg", email: "victoria.jiang@postgrad.manchester.ac.uk" },
+  { name: "Lab Monkey", grad: "PhD, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/labmonkey.jpg" }
 ];
 
 export const SHANGHAI_TEAM: TeamMember[] = [
