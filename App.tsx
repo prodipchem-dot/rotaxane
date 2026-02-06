@@ -59,19 +59,15 @@ const App: React.FC = () => {
       <Navbar currentSlug={route.view} />
 
       <main className="flex-grow">
-        {/* PARTNER LOGOS SECTION */}
-        <section className="pt-24 md:pt-28 pb-4 container mx-auto px-4 md:px-6">
+        {/* PARTNER LOGOS SECTION - UoM Logo removed as requested */}
+        <section className="pt-20 md:pt-24 pb-2 container mx-auto px-4 md:px-6">
            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-8">
              <div className="flex gap-4 md:gap-6 items-center flex-wrap justify-center lg:justify-start">
                <a href="https://www.ucl.ac.uk/sustainable/take-action/staff-action/leaf-laboratory-efficiency-assessment-framework" target="_blank" rel="noreferrer">
-                 <img src="https://www.catenane.net/images/Leaflogo.jpg" alt="LEAF Logo" className="h-12 md:h-16 rounded-lg shadow-lg hover:scale-105 transition-transform" />
+                 <img src="https://www.catenane.net/images/Leaflogo.jpg" alt="LEAF Logo" className="h-10 md:h-12 rounded-lg shadow-lg hover:scale-105 transition-transform" />
                </a>
                <a href="https://www.catenane.net/pages/video_CAMERA_motor.html" target="_blank" rel="noreferrer">
-                 <img src="https://www.catenane.net/images/CAMERA_banner.jpg" alt="CAMERA Banner" className="h-12 md:h-16 rounded-lg shadow-lg hover:scale-105 transition-transform" />
-               </a>
-               <div className="h-10 w-px bg-purple-500/20 hidden sm:block"></div>
-               <a href="http://www.chemistry.manchester.ac.uk/" target="_blank" rel="noreferrer">
-                 <img src="https://www.catenane.net/images/UoM_logo.png" alt="University of Manchester" className="h-10 md:h-14 brightness-0 invert opacity-80" />
+                 <img src="https://www.catenane.net/images/CAMERA_banner.jpg" alt="CAMERA Banner" className="h-10 md:h-12 rounded-lg shadow-lg hover:scale-105 transition-transform" />
                </a>
              </div>
            </div>

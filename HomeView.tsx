@@ -8,23 +8,22 @@ import {
 const HomeView: React.FC = () => {
   return (
     <div className="space-y-0">
-      {/* HERO SECTION */}
-      <section id="hero" className="relative py-24 overflow-hidden scroll-mt-24">
+      {/* HERO SECTION - SINGLE LINE AND REDUCED FONT SIZE */}
+      <section id="hero" className="relative pt-6 pb-24 overflow-hidden scroll-mt-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-6">
-              <h1 className="text-7xl md:text-9xl font-bold leading-[0.85] serif italic text-white text-glow-purple">
-                Welcome <br /> <span className="text-yellow-400 font-century not-italic tracking-tighter uppercase">Leigh Group</span>
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight serif italic text-white text-glow-purple whitespace-nowrap">
+                Welcome to <span className="text-yellow-400 font-century not-italic tracking-tighter uppercase">Leigh Group</span>
               </h1>
               <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed font-light">
                 Exploring fundamental ways to control <span className="text-white font-medium">molecular-level dynamics and topology</span>.
               </p>
             </div>
 
-            {/* VIDEO & MANCHESTER IMAGES SECTION - MUCH SMALLER VIDEO */}
+            {/* VIDEO & MANCHESTER IMAGES SECTION */}
             <div className="flex justify-center">
               <div className="grid md:grid-cols-12 gap-6 items-stretch max-w-5xl w-full">
-                {/* SMALLER VIDEO CONTAINER (md:col-span-5 instead of 8) */}
                 <div className="md:col-start-3 md:col-span-5 aspect-video rounded-3xl overflow-hidden border border-purple-500/30 shadow-2xl relative group bg-slate-900">
                   <iframe 
                     className="w-full h-full opacity-90 hover:opacity-100 transition-opacity"
@@ -35,7 +34,6 @@ const HomeView: React.FC = () => {
                     allowFullScreen
                   ></iframe>
                 </div>
-                {/* ADJACENT IMAGES (md:col-span-3) */}
                 <div className="md:col-span-2 flex flex-col gap-3">
                   <a href="https://www.youtube.com/watch?v=BmSKF5hdIpw" target="_blank" rel="noreferrer" className="flex-1 group">
                     <div className="h-full rounded-2xl overflow-hidden border border-white/10 group-hover:border-yellow-400/50 transition-all">
@@ -58,7 +56,7 @@ const HomeView: React.FC = () => {
       <section className="pb-32 container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12">
           
-          {/* RESEARCH HIGHLIGHTS SIDEBAR (ONE COLUMN OF CONTENT - LARGER THUMBNAILS) */}
+          {/* RESEARCH HIGHLIGHTS SIDEBAR */}
           <aside className="lg:col-span-3 space-y-10 border-r border-white/5 pr-6">
             <div className="sticky top-28 space-y-8">
               <div className="space-y-2">
@@ -74,7 +72,6 @@ const HomeView: React.FC = () => {
                     key={idx} 
                     className="group flex items-start gap-4 p-3 rounded-2xl border border-transparent hover:border-purple-500/20 hover:bg-slate-900/50 transition-all"
                   >
-                    {/* ENLARGED THUMBNAIL TO FIT SIDEBAR BETTER */}
                     <div className="w-24 h-20 flex-shrink-0 rounded-xl overflow-hidden border border-white/5 bg-slate-800 shadow-lg">
                       <img 
                         src={item.img} 
@@ -83,7 +80,6 @@ const HomeView: React.FC = () => {
                       />
                     </div>
                     
-                    {/* CONTENT COLUMN */}
                     <div className="flex-grow pt-1">
                       <div className="flex justify-between items-start gap-2 mb-1">
                         <span className="text-yellow-400 text-[9px] font-black uppercase tracking-widest">{item.year}</span>
@@ -95,12 +91,6 @@ const HomeView: React.FC = () => {
                     </div>
                   </a>
                 ))}
-              </div>
-              
-              <div className="pt-6 border-t border-white/5">
-                <p className="text-[10px] text-slate-600 italic leading-relaxed">
-                  Exploring three decades of pioneers in molecular machinery and topological chemistry.
-                </p>
               </div>
             </div>
           </aside>
@@ -136,22 +126,12 @@ const HomeView: React.FC = () => {
                     <p>
                       When we learn how to build artificial structures that can control and exploit molecular level motion, and interface their effects directly with other molecular-level substructures and the outside world, it will potentially impact on every aspect of functional molecule and materials design. An improved understanding of physics and biology will surely follow.
                     </p>
-
-                    <div className="space-y-4 pt-4">
-                      <p className="bg-slate-900/50 p-8 border-l-4 border-yellow-500 italic rounded-r-2xl text-lg text-white">
-                        "If you want to conquer the ocean and reach out for new continents don't tell your men to get wood and nails to build a ship, just instil in them the yearning for the expanse of the seas and distant lands"
-                      </p>
-                      <p className="text-right font-bold text-slate-500 uppercase tracking-widest text-xs pr-8">— Antoine de Saint-Exupery</p>
-                    </div>
                   </div>
                 </div>
 
                 <div className="space-y-12">
                   <div className="rounded-[3rem] overflow-hidden border border-purple-500/20 shadow-2xl bg-slate-900/50">
                     <img src="https://www.catenane.net/images/general/research-map.png" alt="Research Map" className="w-full h-auto p-4" />
-                  </div>
-                  <div className="rounded-[3rem] overflow-hidden border border-purple-500/20 shadow-2xl bg-slate-900/50">
-                    <img src="https://www.catenane.net/images/article_pictures/knotcatalysis2016/CartaMarinaKnot.jpg" alt="Carta Marina Knot" className="w-full h-auto p-4" />
                   </div>
                 </div>
               </div>
@@ -177,9 +157,7 @@ const HomeView: React.FC = () => {
                   </div>
                 </div>
 
-                {/* QUICK LINKS GRID */}
                 <div className="grid grid-cols-1 gap-4">
-                  {/* THE TEAM / GROUP PHOTO BUTTON */}
                   <a href="#/people" className="group relative h-40 rounded-[2.5rem] overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all shadow-xl">
                     <img 
                       src="https://www.catenane.net/images/GroupPhoto2025.jpg" 
@@ -192,7 +170,6 @@ const HomeView: React.FC = () => {
                       <p className="text-yellow-400 text-[8px] font-bold uppercase tracking-widest">Leigh Group 2025</p>
                     </div>
                   </a>
-
                   <a href="#/vtour" className="group bg-slate-900/50 border border-white/5 p-6 rounded-[2.5rem] hover:border-purple-500/30 transition-all">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-xl bg-purple-900/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-all">
@@ -204,22 +181,10 @@ const HomeView: React.FC = () => {
                       </div>
                     </div>
                   </a>
-                  <a href="https://www.catenane.net/pages/links.html" target="_blank" className="group bg-slate-900/50 border border-white/5 p-6 rounded-[2.5rem] hover:border-yellow-400/30 transition-all">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-yellow-400/10 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-400 group-hover:text-slate-900 transition-all">
-                        <MapIcon size={20} />
-                      </div>
-                      <div>
-                        <h4 className="text-white font-bold serif italic text-base leading-tight">World Map</h4>
-                        <p className="text-slate-500 text-[10px]">Researcher Network</p>
-                      </div>
-                    </div>
-                  </a>
                 </div>
               </div>
             </div>
 
-            {/* RECRUITMENT CALLOUT (Moved inside main column) */}
             <div className="bg-slate-900/80 border border-yellow-400/20 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-white serif italic leading-tight">Join the Leigh Group</h3>
