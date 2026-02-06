@@ -32,5 +32,8 @@ export const HIGHLIGHTS = [
   { title: "Pentafoil Knot", img: "https://www.catenane.net/images/knot_box_2011_stroke3.jpg", year: "2012" },
   { title: "Walking Molecule", img: "https://www.catenane.net/images/natchempaper2009.jpg", year: "2010" },
   { title: "Hybrid Organic-Inorganic Rotaxanes", img: "https://www.catenane.net/images/naturepaper2009.jpg", year: "2009" },
-  { title: "Molecular Information Ratchet", img: "https://www.catenane.net/images/mdhomepaper.jpg", year: "2007" }
+  { title: "Molecular Information Ratchet", img: "https://www.catenane.net/images/mdhomepaper.jpg", year: "2007" },
+  { title: "Macroscopic Transport", img: "https://www.catenane.net/images/natmatpaper.jpg", year: "2005" },
+  { title: "Synthetic Rotary Motor", img: "https://www.catenane.net/images/nov2004paper.jpg", year: "2004" },
+  { title: "Mechanically-Interlocked Motor", img: "https://www.catenane.net/images/newpic3.jpg", year: "2003" }
 ];
