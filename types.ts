@@ -15,3 +15,39 @@ export interface Message {
   role: 'user' | 'assistant';
   content: string;
 }
+
+// Added TeamMember interface to fix import errors in constants and views
+export interface TeamMember {
+  name: string;
+  grad: string;
+  img: string;
+  email?: string;
+}
+
+// Added ProjectDetail interface for research project narrative data
+export interface ProjectDetail {
+  slug: string;
+  citation: string;
+  narrativeTitle: string;
+  narrative: string[];
+  figures: {
+    type: 'image' | 'video';
+    url: string;
+    caption: string;
+  }[];
+}
+
+export interface Publication {
+  title: string;
+  authors: string;
+  journal: string;
+  link: string;
+  img: string;
+  highlight?: string;
+  isCover?: boolean;
+}
+
+export interface YearGroup {
+  year: string;
+  papers: Publication[];
+}

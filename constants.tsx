@@ -1,5 +1,5 @@
 
-import { NavItem } from './types';
+import { NavItem, TeamMember, ProjectDetail, Publication, YearGroup } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#/home' },
@@ -37,27 +37,6 @@ export const HIGHLIGHTS = [
   { title: "Synthetic Rotary Motor", slug: "rotary-motor-2004", img: "https://www.catenane.net/images/article_pictures/2004rotary_motor_fig1.jpg", year: "2004" },
   { title: "Mechanically-Interlocked Motor", slug: "rotary-motor-2003", img: "https://www.catenane.net/images/article_pictures/2003rotary_motor_fig1.jpg", year: "2003" }
 ];
-
-export interface Figure {
-  type: 'image' | 'video';
-  url: string;
-  caption: string;
-}
-
-export interface ProjectDetail {
-  slug: string;
-  citation: string;
-  narrativeTitle: string;
-  narrative: string[];
-  figures: Figure[];
-}
-
-export interface TeamMember {
-  name: string;
-  grad: string;
-  img: string;
-  email?: string;
-}
 
 export const MANCHESTER_TEAM: TeamMember[] = [
   { name: "Adam Lehchilli", grad: "MSci, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Adam.jpg", email: "adam.lehchilli@postgrad.manchester.ac.uk" },
@@ -405,3 +384,57 @@ export const RESEARCH_DETAILS: Record<string, ProjectDetail> = {
     ]
   }
 };
+
+export const PUBLICATION_DATA: YearGroup[] = [
+  {
+    year: "2026",
+    papers: [
+      { 
+        title: "Chiral catalysis-driven rotary molecular motors", 
+        authors: "H-K Liu, B M W Roberts, S Borsley, R W Adams, G F S Whitehead, A Hasija and D A Leigh", 
+        journal: "NAT CHEM", 
+        link: "https://www.nature.com/articles/s41557-025-02050-0",
+        img: "https://www.catenane.net/images/graphical_abstracts/2026/chiralcatalysisdrivenmolecularmotors.png"
+      },
+      { 
+        title: "Clean electrospray deposition of porphyrin molecules and polyethylene glycol chains onto a Au(100) surface", 
+        authors: "K Kolar, M Kappe, H Siboni, I Gazizullin, G J Simpson, C Nacci, C M Storey, D A Leigh and L Grill", 
+        journal: "J PHYS CHEM C", 
+        link: "https://doi.org/10.1021/acs.jpcc.5c06482",
+        img: "https://www.catenane.net/images/graphical_abstracts/2026/cleanelectrospray.jpg"
+      }
+    ]
+  },
+  {
+    year: "2025",
+    papers: [
+      { 
+        title: "Transducing chemical energy through catalysis by an artificial molecular motor", 
+        authors: "P-L Wang, S Borsley, M J Power, A Cavasso, N Giuseppone and D A Leigh", 
+        journal: "NATURE", 
+        link: "https://t.co/YWomGAutpU",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/Gelga.png"
+      },
+      { 
+        title: "Metal-free active template synthesis of catenanes", 
+        authors: "J Zhong, E Olivieri, P Zwick, A Troncossi, A S Baluna, D J Tetlow, G F S Whitehead, A Hasija and D A Leigh", 
+        journal: "ANGEW CHEM", 
+        link: "https://doi-org.manchester.idm.oclc.org/10.1002/anov.70004",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/mfreeactivetemplate.png",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2024",
+    papers: [
+      { 
+        title: "Mechanical scission of a knotted polymer", 
+        authors: "M Zhang, R Nixon, F Schaufelberger, L Pirvu, G De Bo and D A Leigh", 
+        journal: "NAT CHEM", 
+        link: "https://www.nature.com/articles/s41557-024-01510-3",
+        img: "https://www.catenane.net/images/graphical_abstracts/2024/knotbreaking.jpg"
+      }
+    ]
+  }
+];

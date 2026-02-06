@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
 import { Mail, GraduationCap, MapPin, Search } from 'lucide-react';
-import { MANCHESTER_TEAM, SHANGHAI_TEAM, TeamMember } from './constants';
+import { MANCHESTER_TEAM, SHANGHAI_TEAM } from './constants';
+// Fixed: Import TeamMember from types.ts as it is not exported from constants.tsx
+import { TeamMember } from './types';
 
 const PeopleView: React.FC = () => {
   const [activeTeam, setActiveTeam] = useState('manchester');

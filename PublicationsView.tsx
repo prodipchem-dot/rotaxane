@@ -1,75 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ExternalLink, Search, Award } from 'lucide-react';
-
-interface Publication {
-  title: string;
-  authors: string;
-  journal: string;
-  link: string;
-  img: string;
-  highlight?: string;
-  isCover?: boolean;
-}
-
-interface YearGroup {
-  year: string;
-  papers: Publication[];
-}
-
-const PUBLICATION_DATA: YearGroup[] = [
-  {
-    year: "2026",
-    papers: [
-      { 
-        title: "Chiral catalysis-driven rotary molecular motors", 
-        authors: "H-K Liu, B M W Roberts, S Borsley, R W Adams, G F S Whitehead, A Hasija and D A Leigh", 
-        journal: "NAT CHEM", 
-        link: "https://www.nature.com/articles/s41557-025-02050-0",
-        img: "https://www.catenane.net/images/graphical_abstracts/2026/chiralcatalysisdrivenmolecularmotors.png"
-      },
-      { 
-        title: "Clean electrospray deposition of porphyrin molecules and polyethylene glycol chains onto a Au(100) surface", 
-        authors: "K Kolar, M Kappe, H Siboni, I Gazizullin, G J Simpson, C Nacci, C M Storey, D A Leigh and L Grill", 
-        journal: "J PHYS CHEM C", 
-        link: "https://doi.org/10.1021/acs.jpcc.5c06482",
-        img: "https://www.catenane.net/images/graphical_abstracts/2026/cleanelectrospray.jpg"
-      }
-    ]
-  },
-  {
-    year: "2025",
-    papers: [
-      { 
-        title: "Transducing chemical energy through catalysis by an artificial molecular motor", 
-        authors: "P-L Wang, S Borsley, M J Power, A Cavasso, N Giuseppone and D A Leigh", 
-        journal: "NATURE", 
-        link: "https://t.co/YWomGAutpU",
-        img: "https://www.catenane.net/images/graphical_abstracts/2025/Gelga.png"
-      },
-      { 
-        title: "Metal-free active template synthesis of catenanes", 
-        authors: "J Zhong, E Olivieri, P Zwick, A Troncossi, A S Baluna, D J Tetlow, G F S Whitehead, A Hasija and D A Leigh", 
-        journal: "ANGEW CHEM", 
-        link: "https://doi-org.manchester.idm.oclc.org/10.1002/anov.70004",
-        img: "https://www.catenane.net/images/graphical_abstracts/2025/mfreeactivetemplate.png",
-        isCover: true
-      }
-    ]
-  },
-  {
-    year: "2024",
-    papers: [
-      { 
-        title: "Mechanical scission of a knotted polymer", 
-        authors: "M Zhang, R Nixon, F Schaufelberger, L Pirvu, G De Bo and D A Leigh", 
-        journal: "NAT CHEM", 
-        link: "https://www.nature.com/articles/s41557-024-01510-3",
-        img: "https://www.catenane.net/images/graphical_abstracts/2024/knotbreaking.jpg"
-      }
-    ]
-  }
-];
+import { PUBLICATION_DATA } from './constants';
 
 const PublicationsView: React.FC = () => {
   const [activeYear, setActiveYear] = useState("2026");
@@ -199,16 +131,21 @@ const PublicationsView: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* RIGHT IMAGE CONTAINER */}
+                      {/* RIGHT IMAGE CONTAINER - Wrapped in Link as requested */}
                       <div className="w-full md:w-80 flex-shrink-0">
-                        <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/60 p-2 shadow-inner">
+                        <a 
+                          href={pub.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="block aspect-[16/10] rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/60 p-2 shadow-inner group/imglink transition-transform duration-300 active:scale-95"
+                        >
                           <img 
                             src={pub.img} 
                             alt={pub.title} 
-                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 hover:scale-110" 
+                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover/imglink:scale-110" 
                             onError={(e) => { e.currentTarget.src = "https://www.catenane.net/images/graphical_abstracts/placeholder.jpg" }}
                           />
-                        </div>
+                        </a>
                         {pub.isCover && (
                           <div className="mt-3 flex justify-center">
                             <span className="bg-[#ffcc00] text-slate-950 px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest shadow-sm flex items-center gap-2">
