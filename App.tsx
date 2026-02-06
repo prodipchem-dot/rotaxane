@@ -10,7 +10,6 @@ import PublicationsView from './PublicationsView';
 import VirtualTourView from './VirtualTourView';
 import GroupMattersView from './GroupMattersView';
 import { NAV_ITEMS } from './constants';
-import { Hexagon } from 'lucide-react';
 
 const App: React.FC = () => {
   const getSlugFromHash = (hash: string) => {
@@ -60,7 +59,7 @@ const App: React.FC = () => {
       <Navbar currentSlug={route.view} />
 
       <main className="flex-grow">
-        {/* PARTNER LOGOS SECTION - Responsive Padding & Layout */}
+        {/* PARTNER LOGOS SECTION */}
         <section className="pt-24 md:pt-28 pb-4 container mx-auto px-4 md:px-6">
            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-8">
              <div className="flex gap-4 md:gap-6 items-center flex-wrap justify-center lg:justify-start">
@@ -75,9 +74,6 @@ const App: React.FC = () => {
                  <img src="https://www.catenane.net/images/UoM_logo.png" alt="University of Manchester" className="h-10 md:h-14 brightness-0 invert opacity-80" />
                </a>
              </div>
-             <div className="bg-yellow-400 text-slate-900 px-4 py-2 rounded-xl font-bold text-[9px] md:text-[10px] uppercase tracking-widest shadow-xl shadow-yellow-400/10 text-center">
-                Prof. Leigh: Royal Society Research Professor
-             </div>
            </div>
         </section>
 
@@ -91,10 +87,13 @@ const App: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-24">
             <div className="md:col-span-2 space-y-8">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-[#660099] rounded-2xl">
-                  <Hexagon className="text-white w-8 h-8" />
-                </div>
-                <span className="text-white font-bold text-3xl tracking-tighter font-century uppercase">Leigh Group</span>
+                <img 
+                  src="https://www.catenane.net/images/UoM_logo.png" 
+                  alt="Manchester Brand" 
+                  className="h-10 w-auto brightness-0 invert opacity-100" 
+                />
+                <div className="h-8 w-px bg-white/10 mx-2"></div>
+                <span className="text-white font-bold text-3xl tracking-tighter font-century uppercase italic">Leigh Group</span>
               </div>
               <p className="text-slate-500 max-w-sm leading-relaxed text-sm">
                 Synthesis of interlocked architectures and molecular-level machines. 

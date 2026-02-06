@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { NAV_ITEMS } from '../constants';
-import { Hexagon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   currentSlug: string;
@@ -38,12 +38,16 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
       <nav className="fixed top-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-purple-500/20 py-3 md:py-4">
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo */}
-          <a href="#/home" className="flex items-center gap-2 md:gap-3 group cursor-pointer z-[60]" onClick={closeMenu}>
-            <div className="p-1.5 md:p-2 bg-[#660099] rounded-lg md:rounded-xl group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-purple-500/20">
-              <Hexagon className="text-white w-5 h-5 md:w-6 md:h-6" />
+          <a href="#/home" className="flex items-center gap-3 md:gap-4 group cursor-pointer z-[60]" onClick={closeMenu}>
+            <div className="flex-shrink-0">
+              <img 
+                src="https://www.catenane.net/images/UoM_logo.png" 
+                alt="Manchester Logo" 
+                className="h-8 md:h-10 w-auto brightness-0 invert opacity-100 transition-transform duration-500 group-hover:scale-110" 
+              />
             </div>
-            <div className="flex flex-col justify-center">
-              <span className="text-white font-bold text-base md:text-xl tracking-tighter block leading-none font-century uppercase">LEIGH GROUP</span>
+            <div className="flex flex-col justify-center border-l border-white/10 pl-3 md:pl-4">
+              <span className="text-white font-bold text-base md:text-xl tracking-tighter block leading-none font-century uppercase italic">LEIGH GROUP</span>
               <span className="text-yellow-400 text-[7px] md:text-[9px] uppercase tracking-widest font-bold hidden sm:block">Molecular Magic @ Manchester</span>
             </div>
           </a>
@@ -58,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`transition-all text-[9px] xl:text-[10px] font-bold uppercase tracking-[0.2em] relative py-1 ${
+                  className={`transition-all text-[10.5px] xl:text-[11.5px] font-bold uppercase tracking-[0.2em] relative py-1 ${
                     isActive ? 'text-white' : 'text-slate-500 hover:text-slate-300'
                   }`}
                 >
@@ -81,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
           </button>
         </div>
 
-        {/* Mobile Navigation Overlay - Optimized for all screens */}
+        {/* Mobile Navigation Overlay */}
         <div 
           className={`fixed inset-0 w-full h-[100dvh] bg-slate-950/98 backdrop-blur-3xl z-50 lg:hidden transition-all duration-500 ease-in-out overflow-y-auto ${
             isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-full pointer-events-none'
