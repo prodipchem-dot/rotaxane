@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,44 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leigh Group | Molecular Magic at Manchester</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style>
         :root {
             --brand-purple: #660099;
             --brand-gold: #ffcc00;
-            --brand-slate: #f8fafc;
-            --text-main: #0f172a;
+            --brand-slate: #020617;
         }
         body {
-            font-family: 'Arimo', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             scroll-behavior: smooth;
-            background-color: #ffffff;
-            color: #0f172a;
+            background-color: #020617;
         }
-        .serif { font-family: 'Arimo', sans-serif; }
+        /* Overriding serif to Arial as requested */
+        .serif { font-family: Arial, Helvetica, sans-serif; }
+        /* Keeping specific branding font for "Leigh Group" titles as established in previous turns */
         .font-century { font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; }
+        
         .glass {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(102, 0, 153, 0.05);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(102, 0, 153, 0.1);
+            border: 1px solid rgba(102, 0, 153, 0.2);
         }
         .text-glow-purple {
-            text-shadow: 0 0 10px rgba(102, 0, 153, 0.1);
+            text-shadow: 0 0 20px rgba(102, 0, 153, 0.5);
         }
         .bg-purple-gradient {
-            background: radial-gradient(circle at center, #fdf4ff 0%, #ffffff 100%);
+            background: radial-gradient(circle at center, #2e0044 0%, #020617 100%);
         }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #31004a; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #660099; }
-        
-        /* Utility for light theme card contrast */
-        .card-light {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
     </style>
     <script type="importmap">
     {
@@ -61,7 +53,7 @@
     </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="text-slate-900">
+<body class="text-slate-200">
     <div id="root"></div>
 <script type="module" src="/index.tsx"></script>
 </body>
