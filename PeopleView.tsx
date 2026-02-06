@@ -70,7 +70,7 @@ const PeopleView: React.FC = () => {
                     <img 
                         src={person.img} 
                         alt={person.name} 
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
                         onError={(e) => { e.currentTarget.src = "https://www.catenane.net/images/current_members/labmonkey.jpg" }}
                     />
                     <div className="absolute top-4 right-4 flex gap-2">
