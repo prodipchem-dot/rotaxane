@@ -116,7 +116,7 @@ const App: React.FC = () => {
 
             <div>
               <h4 className="text-slate-900 font-bold mb-6 text-xs uppercase tracking-widest text-[#660099]">Location</h4>
-              <div className="text-sm text-slate-600 leading-relaxed text-[11px] space-y-2">
+              <div className="text-sm text-slate-500 leading-relaxed text-[11px] space-y-2">
                 <p className="font-bold text-slate-800 text-slate-700">Manchester Institute of Biotechnology</p>
                 <p>The University of Manchester</p>
                 <p>131 Princess Street</p>

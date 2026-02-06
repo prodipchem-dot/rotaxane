@@ -1,7 +1,7 @@
 import React from 'react';
 import { HIGHLIGHTS } from './constants';
 import { 
-  FlaskConical, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award, ArrowRight
+  FlaskConical, Play, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award, ArrowRight
 } from 'lucide-react';
 
 const ResearchView: React.FC = () => {
@@ -12,7 +12,7 @@ const ResearchView: React.FC = () => {
         <div className="max-w-4xl space-y-12 mb-20">
           <div className="space-y-4">
             <h1 className="text-6xl md:text-7xl font-bold text-slate-900 serif italic tracking-tight">Molecular Robotics</h1>
-            <p className="text-[#660099] text-xs font-bold uppercase tracking-[0.4em]">Science & Public Impact</p>
+            <p className="text-[#660099] text-xs font-bold uppercase tracking-[0.4em]">Introductory Science & Public Impact</p>
           </div>
           
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed text-lg">
@@ -46,7 +46,7 @@ const ResearchView: React.FC = () => {
       </section>
 
       {/* COMMENTS SECTION */}
-      <section className="bg-white border-y border-slate-100 py-32 overflow-hidden">
+      <section className="bg-slate-50 border-y border-slate-100 py-32 overflow-hidden">
         <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-12 gap-16 items-center">
                 <div className="lg:col-span-4 space-y-8">

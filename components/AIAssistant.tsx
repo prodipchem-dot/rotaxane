@@ -49,7 +49,7 @@ const AIAssistant: React.FC = () => {
       <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 bg-[#660099] rounded-2xl flex items-center justify-center -rotate-6 shadow-md">
-            <Wand2 className="text-white w-6 h-6" />
+            < Wand2 className="text-white w-6 h-6" />
           </div>
           <div>
             <h4 className="text-slate-900 font-bold text-base tracking-tight serif italic">Molecular Scholar</h4>

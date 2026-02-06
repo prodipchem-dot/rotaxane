@@ -12,7 +12,7 @@ const HomeView: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight serif italic text-slate-900 text-glow-purple whitespace-nowrap">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight serif italic text-slate-900 whitespace-nowrap">
                 Welcome to <span className="text-[#660099] font-century not-italic tracking-tighter uppercase">Leigh Group</span>
               </h1>
               <p className="text-slate-600 text-xl max-w-2xl mx-auto leading-relaxed font-light">
@@ -50,7 +50,7 @@ const HomeView: React.FC = () => {
         </div>
       </section>
 
-      {/* MAIN CONTENT AREA WITH SIDEBAR */}
+      {/* MAIN CONTENT AREA */}
       <section className="pb-32 container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12">
           
@@ -82,7 +82,7 @@ const HomeView: React.FC = () => {
                         <span className="text-[#660099] text-[9px] font-black uppercase tracking-widest">{item.year}</span>
                         <ChevronRight size={12} className="text-slate-300 group-hover:text-[#660099] group-hover:translate-x-1 transition-all flex-shrink-0" />
                       </div>
-                      <h4 className="text-slate-700 font-bold text-[11px] lg:text-[12px] leading-[1.3] group-hover:text-slate-900 transition-colors">
+                      <h4 className="text-slate-600 font-bold text-[11px] lg:text-[12px] leading-[1.3] group-hover:text-slate-900 transition-colors">
                         {item.title}
                       </h4>
                     </div>
@@ -104,18 +104,18 @@ const HomeView: React.FC = () => {
                   <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
                     <p>
                       Our group explores, invents and discovers fundamental ways to control molecular-level dynamics and topology. 
-                      This includes strategies and methods to synthesize interlocked molecular architectures, molecular machinery, molecular ratchet mechanisms, molecular knotting, assemblers, robotics and weaving.
+                      This includes strategies and methods to synthesize interlocked molecular architectures, molecular machinery, ratchet mechanisms, and complex molecular knots.
                     </p>
                     
                     <div className="space-y-4 pt-4">
                       <p className="bg-slate-50 p-8 border-l-4 border-[#660099] italic rounded-r-2xl text-lg text-slate-800 shadow-sm">
                         "What I cannot create, I do not understand"
                       </p>
-                      <p className="text-right font-bold text-slate-400 uppercase tracking-widest text-xs pr-8">— Richard P. Feynman</p>
+                      <p className="text-right font-bold text-slate-500 uppercase tracking-widest text-xs pr-8">— Richard P. Feynman</p>
                     </div>
 
                     <p>
-                      Perhaps the best way to appreciate the technological potential of controlled molecular-level motion is to recognise that nanomotors and molecular-level machines lie at the heart of every significant biological process. Over billions of years of evolution Nature has not repeatedly chosen this solution for achieving complex task performance without good reason.
+                      Perhaps the best way to appreciate the technological potential of controlled molecular-level motion is to recognise that nanomotors and molecular-level machines lie at the heart of every significant biological process.
                     </p>
                   </div>
                 </div>
