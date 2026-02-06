@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NAV_ITEMS } from '../constants';
-import { Hexagon, Mail } from 'lucide-react';
+import { Hexagon } from 'lucide-react';
 
 interface NavbarProps {
   currentSlug: string;
@@ -42,14 +42,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
             );
           })}
         </div>
-
-        <a 
-          href="mailto:david.leigh@manchester.ac.uk"
-          className="flex items-center gap-2 bg-[#660099] text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-[#7a00b8] transition-all shadow-lg shadow-purple-500/10"
-        >
-          <Mail size={12} />
-          Contact
-        </a>
       </div>
     </nav>
   );
