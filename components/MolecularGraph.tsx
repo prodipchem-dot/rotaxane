@@ -1,9 +1,6 @@
-
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-// Added explicit x and y properties to Node interface to fix TS error: 
-// Object literal may only specify known properties, and 'x' does not exist in type 'Node'.
 interface Node extends d3.SimulationNodeDatum {
   id: string;
   type: 'knot' | 'ligand' | 'metal';
@@ -21,7 +18,6 @@ const MolecularGraph: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    // Return early if no SVG element, returning void which is valid for EffectCallback
     if (!svgRef.current) return;
 
     const width = 800;
@@ -32,15 +28,10 @@ const MolecularGraph: React.FC = () => {
       .attr('viewBox', `0 0 ${width} ${height}`)
       .attr('preserveAspectRatio', 'xMidYMid meet');
 
-    // Create Trefoil Knot structure
     const nodes: Node[] = [];
     const links: Link[] = [];
     const knotPoints = 36;
     
-    // Trefoil Knot Math:
-    // x = sin(t) + 2sin(2t)
-    // y = cos(t) - 2cos(2t)
-    // z = -sin(3t)
     for (let i = 0; i < knotPoints; i++) {
       const t = (i / knotPoints) * 2 * Math.PI;
       nodes.push({ 
@@ -67,7 +58,7 @@ const MolecularGraph: React.FC = () => {
       .join('line')
       .attr('stroke', '#660099')
       .attr('stroke-width', 4)
-      .attr('stroke-opacity', 0.8)
+      .attr('stroke-opacity', 0.6)
       .attr('stroke-linecap', 'round');
 
     const node = svg.append('g')
@@ -76,7 +67,7 @@ const MolecularGraph: React.FC = () => {
       .join('circle')
       .attr('r', 6)
       .attr('fill', '#ffcc00')
-      .attr('stroke', '#020617')
+      .attr('stroke', '#ffffff')
       .attr('stroke-width', 2)
       .call(d3.drag<SVGCircleElement, Node>()
         .on('start', dragstarted)
@@ -110,21 +101,19 @@ const MolecularGraph: React.FC = () => {
       event.subject.fy = null;
     }
 
-    // Fix: The cleanup function must return void. 
-    // d3.Simulation.stop() returns the simulation itself, so we wrap it in a block to return void.
     return () => {
       simulation.stop();
     };
   }, []);
 
   return (
-    <div className="w-full h-[500px] relative overflow-hidden rounded-3xl bg-slate-900/30 border border-purple-500/20 shadow-2xl backdrop-blur-sm">
+    <div className="w-full h-[500px] relative overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-xl backdrop-blur-sm">
       <div className="absolute top-6 left-6 z-10 flex flex-col gap-1">
-        <span className="text-yellow-400 font-bold text-[10px] uppercase tracking-[0.3em]">Active Topology</span>
-        <h3 className="text-white font-bold text-xl serif italic">Artificial Trefoil Molecular Knot</h3>
+        <span className="text-[#660099] font-bold text-[10px] uppercase tracking-[0.3em]">Active Topology</span>
+        <h3 className="text-slate-900 font-bold text-xl serif italic">Artificial Trefoil Molecular Knot</h3>
       </div>
       <svg ref={svgRef} className="w-full h-full" />
-      <div className="absolute bottom-6 left-6 text-purple-400 text-[10px] uppercase tracking-widest font-bold">
+      <div className="absolute bottom-6 left-6 text-slate-400 text-[10px] uppercase tracking-widest font-bold">
         Synthesis: Metal-Template Assembly | University of Manchester
       </div>
     </div>

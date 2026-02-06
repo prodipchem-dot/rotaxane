@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { NAV_ITEMS } from '../constants';
 import { Menu, X } from 'lucide-react';
@@ -33,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200 py-3 md:py-4">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200 py-3 md:py-4">
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <a href="#/home" className="flex items-center gap-3 md:gap-4 group cursor-pointer z-[60]" onClick={closeMenu}>
             <div className="flex-shrink-0">
@@ -63,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#ffcc00] rounded-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#ffcc00] rounded-full animate-in fade-in slide-in-from-left-1 duration-300"></span>
                   )}
                 </a>
               );
@@ -110,6 +109,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                     </a>
                   );
                 })}
+              </div>
+
+              <div className="mt-10 pt-10 border-t border-slate-100 flex flex-col gap-6 w-full items-center">
+                <img src="https://www.catenane.net/images/UoM_logo.png" alt="University of Manchester" className="h-10 opacity-60" />
+                <p className="text-[9px] text-slate-400 uppercase tracking-[0.3em] font-bold text-center">
+                  Sir Samuel Hall Chair<br/>University of Manchester
+                </p>
               </div>
             </div>
           </div>
