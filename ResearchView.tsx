@@ -1,10 +1,20 @@
-import React from 'react';
+
+import React, { useState, useMemo } from 'react';
 import { HIGHLIGHTS } from './constants';
 import { 
-  FlaskConical, Play, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award, ArrowRight
+  FlaskConical, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award, ArrowRight, LayoutGrid
 } from 'lucide-react';
 
+const CATEGORIES = ["All", "Motors & Pumps", "Knots & Topology", "Robotics & Synthesis", "Supramolecular"];
+
 const ResearchView: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredPortfolio = useMemo(() => {
+    if (activeCategory === "All") return HIGHLIGHTS;
+    return HIGHLIGHTS.filter(item => item.category === activeCategory);
+  }, [activeCategory]);
+
   return (
     <div className="py-24 space-y-32">
       {/* INTRO HERO SECTION */}
@@ -12,7 +22,7 @@ const ResearchView: React.FC = () => {
         <div className="max-w-4xl space-y-12 mb-20">
           <div className="space-y-4">
             <h1 className="text-6xl md:text-7xl font-bold text-slate-900 serif italic tracking-tight">Molecular Robotics</h1>
-            <p className="text-[#660099] text-xs font-bold uppercase tracking-[0.4em]">Introductory Science & Public Impact</p>
+            <p className="text-[#660099] text-xs font-bold uppercase tracking-[0.4em]">Science & Public Impact</p>
           </div>
           
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed text-lg">
@@ -45,73 +55,94 @@ const ResearchView: React.FC = () => {
         </div>
       </section>
 
-      {/* COMMENTS SECTION */}
-      <section className="bg-slate-50 border-y border-slate-100 py-32 overflow-hidden">
-        <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-12 gap-16 items-center">
-                <div className="lg:col-span-4 space-y-8">
-                    <div className="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-[#660099]">
-                        <MessageSquare size={32} />
-                    </div>
-                    <h2 className="text-4xl font-bold text-slate-900 serif italic leading-tight">Public Reception</h2>
-                    <p className="text-slate-600 leading-relaxed text-sm">
-                        The Nanobot feature sparked a global conversation about the future of molecular engineering. These comments reflect curiosity and excitement.
-                    </p>
-                </div>
-                <div className="lg:col-span-8 relative">
-                    <div className="relative z-10 rounded-[3rem] overflow-hidden border border-slate-200 bg-white shadow-2xl">
-                        <img 
-                            src="https://www.catenane.net/images/Nanobot%20comments.png" 
-                            alt="Comments" 
-                            className="w-full h-auto opacity-90 transition-opacity duration-700" 
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
-      {/* PORTFOLIO GRID */}
+      {/* PORTFOLIO GRID WITH CATEGORY SUB-FIELD */}
       <section className="container mx-auto px-6 space-y-16">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-5xl font-bold text-slate-900 serif italic">Research Portfolio</h2>
-            <p className="text-slate-400 text-sm font-bold uppercase tracking-[0.4em]">Our Molecular Library</p>
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+                <h2 className="text-5xl font-bold text-slate-900 serif italic">Research Portfolio</h2>
+                <p className="text-slate-400 text-sm font-bold uppercase tracking-[0.4em]">Our Molecular Library</p>
+            </div>
+
+            {/* SUB FIELD / CATEGORY NAVIGATION */}
+            <div className="flex flex-wrap justify-center gap-3 pt-6 border-t border-slate-100">
+                {CATEGORIES.map(cat => (
+                    <button
+                        key={cat}
+                        onClick={() => setActiveCategory(cat)}
+                        className={`px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
+                            activeCategory === cat 
+                                ? 'bg-[#660099] text-white shadow-lg -translate-y-0.5' 
+                                : 'bg-white border border-slate-200 text-slate-500 hover:border-[#660099] hover:text-[#660099]'
+                        }`}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-            <aside className="lg:col-span-3 sticky top-28 space-y-6">
-                <h3 className="text-slate-900 font-bold text-xs uppercase tracking-[0.3em] mb-4">Chronological Index</h3>
-                <div className="flex flex-col border-l border-slate-100 pl-4 gap-2">
-                    {HIGHLIGHTS.map(h => (
-                        <a 
-                            key={h.slug} 
-                            href={`#/research/${h.slug}`}
-                            className="group flex flex-col py-2 transition-all"
-                        >
-                            <span className="text-[#660099] text-[8px] font-black uppercase tracking-widest">{h.year}</span>
-                            <span className="text-slate-500 text-[11px] group-hover:text-[#660099] transition-colors">{h.title}</span>
-                        </a>
-                    ))}
+            <aside className="lg:col-span-3 sticky top-28 space-y-10 border-r border-slate-100 pr-6">
+                <div className="space-y-6">
+                    <div className="flex items-center gap-3 text-[#660099]">
+                        <Award size={18} />
+                        <h3 className="text-slate-900 font-bold text-xs uppercase tracking-[0.3em]">Highlights</h3>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        {HIGHLIGHTS.slice(0, 5).map(h => (
+                            <a 
+                                key={h.slug} 
+                                href={`#/research/${h.slug}`}
+                                className="group flex items-start gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
+                            >
+                                <img src={h.img} className="w-12 h-10 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                <div className="flex-1">
+                                    <span className="text-[#660099] text-[8px] font-black block">{h.year}</span>
+                                    <span className="text-slate-600 text-[10px] font-bold leading-tight group-hover:text-slate-900">{h.title}</span>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+                
+                <div className="pt-8 border-t border-slate-100">
+                    <p className="text-slate-400 text-[9px] font-bold uppercase tracking-widest leading-relaxed">
+                        Total Milestones: {HIGHLIGHTS.length}<br/>
+                        Showing: {filteredPortfolio.length}
+                    </p>
                 </div>
             </aside>
 
             <div className="lg:col-span-9">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-                    {HIGHLIGHTS.map((item, idx) => (
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    {filteredPortfolio.map((item, idx) => (
                         <a 
                             key={idx} 
                             href={`#/research/${item.slug}`} 
-                            className="group relative block rounded-[2.5rem] overflow-hidden border border-slate-200 bg-white aspect-[4/3] hover:border-[#660099] transition-all shadow-md"
+                            className="group relative block rounded-[2.5rem] overflow-hidden border border-slate-200 bg-white aspect-[4/3] hover:border-[#660099] transition-all shadow-sm hover:shadow-xl"
                         >
-                            <img src={item.img} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80 group-hover:opacity-20 transition-opacity"></div>
+                            <img src={item.img} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent opacity-80 group-hover:opacity-20 transition-opacity"></div>
                             <div className="absolute bottom-6 left-6 right-6">
-                                <span className="text-[#660099] text-[10px] font-black uppercase tracking-widest">{item.year}</span>
-                                <h4 className="text-slate-900 font-bold text-[13px] leading-tight serif italic">{item.title}</h4>
+                                <div className="flex justify-between items-center mb-1">
+                                    <span className="text-[#660099] text-[10px] font-black uppercase tracking-widest">{item.year}</span>
+                                    <span className="text-slate-400 text-[8px] font-bold uppercase group-hover:text-[#ffcc00] transition-colors">{item.category}</span>
+                                </div>
+                                <h4 className="text-slate-900 font-bold text-[14px] leading-tight serif italic group-hover:text-[#660099] transition-colors">{item.title}</h4>
                             </div>
                         </a>
                     ))}
                 </div>
+                
+                {filteredPortfolio.length === 0 && (
+                    <div className="py-32 text-center space-y-4">
+                        <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto text-slate-300">
+                            <LayoutGrid size={32} />
+                        </div>
+                        <p className="text-slate-400 italic">No matches in this category yet.</p>
+                        <button onClick={() => setActiveCategory("All")} className="text-[#660099] text-xs font-bold uppercase tracking-widest underline underline-offset-4">View All Research</button>
+                    </div>
+                )}
             </div>
         </div>
       </section>
