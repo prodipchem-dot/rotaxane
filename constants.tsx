@@ -402,6 +402,13 @@ export const PUBLICATION_DATA: YearGroup[] = [
         journal: "J PHYS CHEM C", 
         link: "https://doi.org/10.1021/acs.jpcc.5c06482",
         img: "https://www.catenane.net/images/graphical_abstracts/2026/cleanelectrospray.jpg"
+      },
+      { 
+        title: "Structure-performance relationships for catalysis-driven molecular machinery", 
+        authors: "J Baixeras Buye, J M Gallagher, D A Leigh", 
+        journal: "CHEM", 
+        link: "https://www-sciencedirect-com.manchester.idm.oclc.org/science/article/pii/S245192942500333X?ref=cra_js_challenge&fr=RR-1",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/reviewchemabstract.png"
       }
     ]
   },
@@ -409,19 +416,68 @@ export const PUBLICATION_DATA: YearGroup[] = [
     year: "2025",
     papers: [
       { 
+        title: "Reaction: Of myths, misconceptions and motors—a matter of equilibrium", 
+        authors: "D A Leigh", 
+        journal: "CHEM", 
+        link: "https://doi.org/10.1016/j.chempr.2025.102745",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/chemdaveabstract.png"
+      },
+      { 
+        title: "Multiple template site Nitrogen atom deletions from rotaxanes, catenanes, and a molecular knot", 
+        authors: "D P Couto, Q Lin, J B M Whittingham, D J Tetlow, J Zhong, P Howlader, and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.5c12617",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/images_large_ja5c12617_0008.jpg"
+      },
+      { 
+        title: "Crown ether–peptide rotaxanes", 
+        authors: "P-L Wang, P Chen, R Yang, D J Tetlow, Z-H Zhang, J Han, S D P Fielden, P Howlader, L Zhang and D A Leigh", 
+        journal: "ANGEW CHEM INT ED", 
+        link: "https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202513115",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/crownetherpeptidethumbnail.png"
+      },
+      { 
+        title: "In situ quantification of directional rotation by a catalysis-driven azaindole-N-oxide–phenoic acid molecular motor", 
+        authors: "H-K Liu, A Troncossi, B M W Roberts, S Borsley and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.5c10520",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/noxideabstract.jpg"
+      },
+      { 
+        title: "Metal-free active template synthesis of catenanes", 
+        authors: "J Zhong, E Olivieri, P Zwick, A Troncossi, A S Baluna, D J Tetlow, G F S Whitehead, A Hasija and D A Leigh", 
+        journal: "ANGEW CHEM NOVIT", 
+        link: "https://doi-org.manchester.idm.oclc.org/10.1002/anov.70004",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/mfreeactivetemplate.png",
+        isCover: true
+      },
+      { 
+        title: "Synthesis of a station-less molecular daisy chain", 
+        authors: "C Kress, D Häussinger, D A Leigh and M Mayor", 
+        journal: "CHEM EUR J", 
+        link: "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.202501369",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/Daisychaingraphicalabstract.jpg"
+      },
+      { 
+        title: "A catalysis-driven dual molecular motor", 
+        authors: "P-L Wang, E Olivieri, S Borsley, G F S Whitehead, A Hasija and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.5c01275",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/images_large_ja5c01275_0006.jpg"
+      },
+      { 
+        title: "Structural influence of the chemical fueling system on a catalysis-driven rotary molecular motor", 
+        authors: "H-K Liu, T W Mrad, A Troncossi, S Borsley, B M W Roberts, A Betts and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.5c00028",
+        img: "https://www.catenane.net/images/graphical_abstracts/2025/fuelexploration.jpg"
+      },
+      { 
         title: "Transducing chemical energy through catalysis by an artificial molecular motor", 
         authors: "P-L Wang, S Borsley, M J Power, A Cavasso, N Giuseppone and D A Leigh", 
         journal: "NATURE", 
         link: "https://t.co/YWomGAutpU",
         img: "https://www.catenane.net/images/graphical_abstracts/2025/Gelga.png"
-      },
-      { 
-        title: "Metal-free active template synthesis of catenanes", 
-        authors: "J Zhong, E Olivieri, P Zwick, A Troncossi, A S Baluna, D J Tetlow, G F S Whitehead, A Hasija and D A Leigh", 
-        journal: "ANGEW CHEM", 
-        link: "https://doi-org.manchester.idm.oclc.org/10.1002/anov.70004",
-        img: "https://www.catenane.net/images/graphical_abstracts/2025/mfreeactivetemplate.png",
-        isCover: true
       }
     ]
   },
@@ -429,11 +485,336 @@ export const PUBLICATION_DATA: YearGroup[] = [
     year: "2024",
     papers: [
       { 
+        title: "Out-of-equilibrium compartments: Thinking inside the box", 
+        authors: "J M Gallagher, J Baixeras Buye, and D A Leigh", 
+        journal: "CHEM", 
+        link: "https://www.cell.com/chem/abstract/S2451-9294(24)00501-1",
+        img: "https://www.catenane.net/images/graphical_abstracts/2024/outofequilibriumcompartments.png"
+      },
+      { 
+        title: "Skeletal editing of mechanically interlocked molecules: Nitrogen atom deletion from crown ether-dibenzylammonium rotaxanes", 
+        authors: "M Gauthier, J B M Whittingham, A Hasija, D J Tetlow, and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.4c09066",
+        img: "https://www.catenane.net/images/graphical_abstracts/2024/thumbnail_jacs.4c09066.social.png"
+      },
+      { 
+        title: "Active template synthesis", 
+        authors: "R Jamagne, M J Power, Z-H Zhang, G Zango, B Gibber and D A Leigh", 
+        journal: "CHEM SOC REV", 
+        link: "https://pubs.rsc.org/en/content/articlepdf/2024/CS/D4CS00430B",
+        img: "https://www.catenane.net/images/graphical_abstracts/2024/activetemplatereview.png"
+      },
+      { 
+        title: "Folding a molecular strand into a trefoil knot of single handedness with Co(II)/Co(III) chaperones", 
+        authors: "J Zhong, Z Sun, L Zhang, G F S Whitehead, I J Vitorica-Yrezabal and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "https://doi.org/10.1021/jacs.4c05953",
+        img: "https://www.catenane.net/images/graphical_abstracts/2024/foldingtrefoilknot.png"
+      },
+      { 
         title: "Mechanical scission of a knotted polymer", 
         authors: "M Zhang, R Nixon, F Schaufelberger, L Pirvu, G De Bo and D A Leigh", 
         journal: "NAT CHEM", 
         link: "https://www.nature.com/articles/s41557-024-01510-3",
         img: "https://www.catenane.net/images/graphical_abstracts/2024/knotbreaking.jpg"
+      },
+      { 
+        title: "Macroscopic spiral rotation of microscopic objects induced by nanoscale rotaxane dynamics", 
+        authors: "A Ryabchun, R Jamagne, J Echavarren, M Patanapongpibul, L Zhang, N Katsonis and D A Leigh", 
+        journal: "CHEM", 
+        link: "https://www.sciencedirect.com/science/article/pii/S2451929424001220",
+        img: "https://www.catenane.net/images/graphical_abstracts/2024/macroscopicspiral.png"
+      },
+      { 
+        title: "Molecular ratchets and kinetic asymmetry: Giving chemistry direction", 
+        authors: "S Borsley, D A Leigh and B M W Roberts", 
+        journal: "ANGEW CHEM INT ED", 
+        link: "https://onlinelibrary.wiley.com/doi/10.1002/anie.202400495",
+        img: "https://www.catenane.net/images/graphical_abstracts/2023/ratchetreview.png"
+      }
+    ]
+  },
+  {
+    year: "2023",
+    papers: [
+      { 
+        title: "Switched “on” transient fluorescence output from a pulsed-fuel molecular ratchet", 
+        authors: "A S Baluna, M Dommaschk, B Groh, S Kassem, D A Leigh, D J Tetlow, D Thomas and L V López", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.3c11290#",
+        img: "https://www.catenane.net/images/graphical_abstracts/2023/images_large_ja3c11290_0006.png"
+      },
+      { 
+        title: "The role of kinetic asymmetry and power strokes in an information ratchet", 
+        authors: "L Binks, S Borsley, T R Gingrich, D A Leigh, E Penocchio, and B M W Roberts", 
+        journal: "CHEM", 
+        link: "https://authors.elsevier.com/sd/article/S2451-9294(23)00267-X",
+        img: "https://www.catenane.net/images/graphical_abstracts/2023/BadMotors.png"
+      },
+      { 
+        title: "In search of Wasserman’s catenane", 
+        authors: "A S Baluna, A Galan, D A Leigh, G D Smith, J T J Spence, D J Tetlow, I J Vitorica-Yrezabal and M Zhang", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.3c01939",
+        img: "https://www.catenane.net/images/graphical_abstracts/2023/Wasserman.png"
+      },
+      { 
+        title: "Mechanical tightening of a synthetic molecular knot", 
+        authors: "M Calvaresi, A-S Duwez, D A Leigh, D Sluysmans, Y Song, F Zerbetto and L Zhang", 
+        journal: "CHEM", 
+        link: "https://www.sciencedirect.com/science/article/pii/S245192942200657X",
+        img: "https://www.catenane.net/images/graphical_abstracts/2023/AFMKnot.jpg",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2022",
+    papers: [
+      { 
+        title: "A tape-reading molecular ratchet", 
+        authors: "Y Ren, R Jamagne, D J Tetlow and D A Leigh", 
+        journal: "NATURE", 
+        link: "https://www.nature.com/articles/s41586-022-05305-9",
+        img: "https://www.catenane.net/images/graphical_abstracts/2022/Turing.png"
+      },
+      { 
+        title: "Using catalysis to drive chemistry away from equilibrium: relating kinetic asymmetry, power strokes, and the Curtin-Hammett principle in Brownian ratchets", 
+        authors: "S Amano, M Esposito, E Kreidt, D A Leigh, E Penocchio and B M W Roberts", 
+        journal: "J AM CHEM SOC", 
+        link: "https://pubs.acs.org/doi/10.1021/jacs.2c08723",
+        img: "https://www.catenane.net/images/graphical_abstracts/2022/Curtin-Hammett.jpg"
+      },
+      { 
+        title: "Vernier template synthesis of molecular knots", 
+        authors: "Z Ashbridge, E Kreidt, L Pirvu, F Schaufelberger, J Halldin Stenlid, F Abild-Pedersen and D A Leigh", 
+        journal: "SCIENCE", 
+        link: "https://www.science.org/doi/10.1126/science.abm9247",
+        img: "https://www.catenane.net/images/graphical_abstracts/2022/Vernier.png"
+      },
+      { 
+        title: "Molecular weaving", 
+        authors: "Z-H Zhang, B J Andreassen, D P August, D A Leigh and L Zhang", 
+        journal: "NAT MATER", 
+        link: "https://www.nature.com/articles/s41563-021-01179-w",
+        img: "https://www.catenane.net/images/graphical_abstracts/2022/IntWov.png",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2021",
+    papers: [
+      { 
+        title: "A catalysis-driven artificial molecular pump", 
+        authors: "S Amano, S D P Fielden and D A Leigh", 
+        journal: "NATURE", 
+        link: "https://www.nature.com/articles/s41586-021-03575-3",
+        img: "https://www.catenane.net/images/graphical_abstracts/2021/VidKey.png"
+      },
+      { 
+        title: "Chemical engines: Driving systems away from equilibrium through catalyst reaction cycles", 
+        authors: "S Amano, S Borsley, D A Leigh and Z Sun", 
+        journal: "NAT NANOTECHNOL", 
+        link: "https://www.nature.com/articles/s41565-021-00975-4",
+        img: "https://www.catenane.net/images/graphical_abstracts/2021/Drivsys.png"
+      },
+      { 
+        title: "A molecular endless (74) knot", 
+        authors: "D A Leigh, J J Danon, S D P Fielden, J-F Lemonnier, G F S Whitehead and S L Woltering", 
+        journal: "NAT CHEM", 
+        link: "https://www.nature.com/articles/s41557-020-00594-x",
+        img: "https://www.catenane.net/images/graphical_abstracts/2020/endless.jpg",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2020",
+    papers: [
+      { 
+        title: "Self-assembly of a layered two-dimensional molecularly woven fabric", 
+        authors: "D P August, R A W Dryfe, S J Haigh, P R C Kent, D A Leigh, J-F Lemonnier, Z Li, C A Muryn, L I Palmer, Y Song, G F S Whitehead and R J Young", 
+        journal: "NATURE", 
+        link: "https://www.nature.com/articles/s41586-020-3019-9",
+        img: "https://www.catenane.net/images/graphical_abstracts/2020/2DMatgraph.png"
+      },
+      { 
+        title: "Tying different knots in a molecular strand", 
+        authors: "D A Leigh, F Schaufelberger, L Pirvu, J Halldin Stenlid, D P August and J Segard", 
+        journal: "NATURE", 
+        link: "https://www.nature.com/articles/s41586-020-2614-0",
+        img: "https://www.catenane.net/images/graphical_abstracts/2020/5_2_knot.jpg"
+      },
+      { 
+        title: "A track-based molecular synthesizer that builds a single-sequence oligomer through iterative carbon-carbon bond formation", 
+        authors: "C T McTernan, G De Bo and D A Leigh", 
+        journal: "CHEM", 
+        link: "http://disq.us/t/3s9vg81",
+        img: "https://www.catenane.net/images/graphical_abstracts/2020/Wittigator.png",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2019",
+    papers: [
+      { 
+        title: "Dynamic control of chiral space through local symmetry breaking in a rotaxane organocatalyst", 
+        authors: "M Dommaschk, J Echavarren, D A Leigh, V Marcos and T A Singleton", 
+        journal: "ANGEW CHEM INT ED", 
+        link: "https://onlinelibrary.wiley.com/doi/pdf/10.1002/anie.201908330",
+        img: "https://www.catenane.net/images/graphical_abstracts/2019/Rotaxorgano.png"
+      },
+      { 
+        title: "Dissipative catalysis with a molecular machine", 
+        authors: "C Biagini, S D P Fielden, D A Leigh, F Schaufelberger, S Di Stefano and D Thomas", 
+        journal: "ANGEW CHEM INT ED", 
+        link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201905250",
+        img: "https://www.catenane.net/images/graphical_abstracts/2019/Disscatmech.png",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2018",
+    papers: [
+      { 
+        title: "Stereoselective synthesis of a composite knot with nine crossings", 
+        authors: "L Zhang, A J Stephens, A L Nussbaumer, J-F Lemonnier, P Jurček, I J Vitorica-Yrezabal and D A Leigh", 
+        journal: "NAT CHEM", 
+        link: "https://www.nature.com/articles/s41557-018-0124-6",
+        img: "https://www.catenane.net/images/graphical_abstracts/2018/compositeknot.png",
+        isCover: true
+      },
+      { 
+        title: "An artificial molecular machine that builds an asymmetric catalyst", 
+        authors: "G De Bo, M A Y Gall, S Kuschel, J De Winter, P Gerbaux and D A Leigh", 
+        journal: "NAT NANOTECHNOL", 
+        link: "https://www.nature.com/articles/s41565-018-0105-3",
+        img: "https://www.catenane.net/images/graphical_abstracts/2018/NatNano_TOC.png"
+      }
+    ]
+  },
+  {
+    year: "2017",
+    papers: [
+      { 
+        title: "Rotary and linear molecular motors driven by pulses of a chemical fuel", 
+        authors: "S Erbas-Cakmak, S D P Fielden, U Karaca, D A Leigh, C T McTernan, D J Tetlow and M R Wilson", 
+        journal: "SCIENCE", 
+        link: "http://science.sciencemag.org/content/358/6361/340",
+        img: "https://www.catenane.net/images/article_pictures/chemical_fuelled_motor_2017/chemical_fuelled_motor_cover_cropped.jpg"
+      },
+      { 
+        title: "Stereodivergent synthesis with a programmable molecular machine", 
+        authors: "S Kassem, A T L Lee, D A Leigh, V Marcos, L I Palmer and S Pisano", 
+        journal: "NATURE", 
+        link: "http://rdcu.be/v2q1",
+        img: "https://www.catenane.net/images/graphical_abstracts/2017/assembler_cover_abstract.jpg"
+      },
+      { 
+        title: "Braiding a molecular knot with eight crossings", 
+        authors: "J J Danon, A Krüger, D A Leigh, J-F Lemonnier, A J Stephens, I J Vitorica-Yrezabal and S L Woltering", 
+        journal: "SCIENCE", 
+        link: "http://science.sciencemag.org/content/355/6321/159",
+        img: "https://www.catenane.net/images/article_pictures/819knot2017/819knot-cut.jpg"
+      }
+    ]
+  },
+  {
+    year: "2016",
+    papers: [
+      { 
+        title: "An autonomous chemically fuelled small-molecule motor", 
+        authors: "M R Wilson, J Solá, A Carlone, S M Goldup, N Lebrasseur and D A Leigh", 
+        journal: "NATURE", 
+        link: "http://www.nature.com/nature/journal/v534/n7606/full/nature18013.html",
+        img: "https://www.catenane.net/images/article_pictures/nanomotor2016/Figure2a.gif"
+      },
+      { 
+        title: "Allosteric initiation and regulation of catalysis with a molecular knot", 
+        authors: "V Marcos, A J Stephens, J Jaramillo-Garcia, A L Nussbaumer, S L Woltering, A Valero, J-F Lemonnier, I J Vitorica-Yrezabal, D A Leigh", 
+        journal: "SCIENCE", 
+        link: "http://science.sciencemag.org/content/352/6293/1555",
+        img: "https://www.catenane.net/images/article_pictures/knotcatalysis2016/knotcatalysis_2016_cover.jpg"
+      },
+      { 
+        title: "Pick-up, transport and release of a molecular cargo using a small-molecule robotic arm", 
+        authors: "S Kassem, A T L Lee, D A Leigh, A Markevicius and J Solá", 
+        journal: "NAT CHEM", 
+        link: "https://www.nature.com/articles/nchem.2410",
+        img: "https://www.catenane.net/images/graphical_abstracts/2015/2015TransporterGraphicalAbstract.jpg"
+      }
+    ]
+  },
+  {
+    year: "2015",
+    papers: [
+      { 
+        title: "Lanthanide template synthesis of trefoil knots of single handedness", 
+        authors: "G Zhang, G Gil-Ramírez, A Markevicius, C Browne, I J Vitorica-Yrezabal and D A Leigh", 
+        journal: "J AM CHEM SOC", 
+        link: "http://pubs.acs.org/doi/abs/10.1021/jacs.5b07069",
+        img: "https://www.catenane.net/images/graphical_abstracts/2015/ChiralLanthanideKnot2.png"
+      },
+      { 
+        title: "Catenanes: Fifty years of molecular links", 
+        authors: "G Gil-Ramírez, D A Leigh and A J Stephens", 
+        journal: "ANGEW CHEM INT ED", 
+        link: "http://onlinelibrary.wiley.com/doi/10.1002/anie.201411619/abstract",
+        img: "https://www.catenane.net/images/graphical_abstracts/2015/50yrsToC-2.jpg"
+      }
+    ]
+  },
+  {
+    year: "2014",
+    papers: [
+      { 
+        title: "A Star of David Catenane", 
+        authors: "D A Leigh, R G Pritchard and A J Stephens", 
+        journal: "NAT CHEM", 
+        link: "http://www.nature.com/nchem/journal/vaop/ncurrent/full/nchem.2056.html",
+        img: "https://www.catenane.net/images/graphical_abstracts/2014/Star%20of%20David%20Cat%20NatChem%20Graph%20abs.png"
+      }
+    ]
+  },
+  {
+    year: "2013",
+    papers: [
+      { 
+        title: "Sequence-Specific Peptide Synthesis by an Artificial Small-Molecule Machine", 
+        authors: "B. Lewandowski, G. De Bo, J. W. Ward, M. Papmeyer, S. Kuschel, M. J. Aldegunde, et al.", 
+        journal: "SCIENCE", 
+        link: "http://www.sciencemag.org/content/339/6116/189.abstract",
+        img: "https://www.catenane.net/images/graphical_abstracts/2013/peptide_synthesizer_cartoon_small.jpg"
+      }
+    ]
+  },
+  {
+    year: "2012",
+    papers: [
+      { 
+        title: "A Synthetic Molecular Pentafoil Knot", 
+        authors: "J-F Ayme, J E Beves, D A Leigh, R T McBurney, K Rissanen & D Schultz", 
+        journal: "NAT CHEM", 
+        link: "http://www.nature.com/nchem/journal/v4/n1/abs/nchem.1193.html",
+        img: "https://www.catenane.net/images/graphical_abstracts/nchem_pentafoil.jpg",
+        isCover: true
+      }
+    ]
+  },
+  {
+    year: "2011",
+    papers: [
+      { 
+        title: "Active Metal Template Synthesis of a Molecular Trefoil Knot", 
+        authors: "P E Barran, H L Cole, S M Goldup, D A Leigh, P R McGonigal, M D Symes, J Wu and M Zengerle", 
+        journal: "ANGEW CHEM INT ED", 
+        link: "http://onlinelibrary.wiley.com/doi/10.1002/anie.201105012/abstract",
+        img: "https://www.catenane.net/images/graphical_abstracts/AMT_trefoil_knot.gif",
+        isCover: true
       }
     ]
   }
