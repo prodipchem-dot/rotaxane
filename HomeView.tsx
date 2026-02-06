@@ -15,7 +15,7 @@ const HomeView: React.FC = () => {
               <h1 className="text-7xl md:text-9xl font-bold leading-[0.85] serif italic text-slate-900">
                 Welcome <br /> <span className="text-[#660099]">Leigh Group</span>
               </h1>
-              <p className="text-slate-600 text-xl max-w-2xl mx-auto leading-relaxed font-light">
+              <p className="text-slate-800 text-xl max-w-2xl mx-auto leading-relaxed font-light">
                 Exploring fundamental ways to control <span className="text-[#660099] font-medium">molecular-level dynamics and topology</span>.
               </p>
             </div>
@@ -61,7 +61,7 @@ const HomeView: React.FC = () => {
               <div className="space-y-2">
                 <h2 className="text-2xl font-bold text-slate-900 serif italic">Research Highlights</h2>
                 <div className="h-1 w-12 bg-[#ffcc00]"></div>
-                <p className="text-slate-500 text-[9px] font-bold uppercase tracking-widest pt-1">Milestones & Discoveries</p>
+                <p className="text-slate-600 text-[9px] font-bold uppercase tracking-widest pt-1">Milestones & Discoveries</p>
               </div>
               
               <div className="flex flex-col gap-3 max-h-[calc(100vh-20rem)] overflow-y-auto pr-4 -mr-4 scrollbar-hide group/list hover:scrollbar-default">
@@ -82,9 +82,9 @@ const HomeView: React.FC = () => {
                     <div className="flex-grow pt-1">
                       <div className="flex justify-between items-start gap-2 mb-1">
                         <span className="text-[#660099] text-[9px] font-black uppercase tracking-widest">{item.year}</span>
-                        <ChevronRight size={12} className="text-slate-300 group-hover:text-[#660099] group-hover:translate-x-1 transition-all flex-shrink-0" />
+                        <ChevronRight size={12} className="text-slate-400 group-hover:text-[#660099] group-hover:translate-x-1 transition-all flex-shrink-0" />
                       </div>
-                      <h4 className="text-slate-700 font-bold text-[11px] lg:text-[12px] leading-[1.3] group-hover:text-slate-900 transition-colors">
+                      <h4 className="text-slate-800 font-bold text-[11px] lg:text-[12px] leading-[1.3] group-hover:text-slate-900 transition-colors">
                         {item.title}
                       </h4>
                     </div>
@@ -105,17 +105,17 @@ const HomeView: React.FC = () => {
                     <h2 className="text-5xl font-bold text-slate-900 serif italic">Our Research</h2>
                   </div>
                   
-                  <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
+                  <div className="prose prose-slate max-w-none text-slate-800 leading-relaxed space-y-6">
                     <p>
                       Our group explores, invents and discovers fundamental ways to control molecular-level dynamics and topology. 
                       This includes strategies and methods to synthesize interlocked molecular architectures, molecular machinery, ratchet mechanisms, molecular knotting, assemblers, robotics and weaving.
                     </p>
                     
                     <div className="space-y-4 pt-4">
-                      <p className="bg-slate-50 p-8 border-l-4 border-[#660099] italic rounded-r-2xl text-lg text-slate-800 shadow-sm">
+                      <p className="bg-slate-50 p-8 border-l-4 border-[#660099] italic rounded-r-2xl text-lg text-slate-900 shadow-sm">
                         "What I cannot create, I do not understand"
                       </p>
-                      <p className="text-right font-bold text-slate-400 uppercase tracking-widest text-xs pr-8">— Richard P. Feynman</p>
+                      <p className="text-right font-bold text-slate-500 uppercase tracking-widest text-xs pr-8">— Richard P. Feynman</p>
                     </div>
 
                     <p>
@@ -170,7 +170,7 @@ const HomeView: React.FC = () => {
                       </div>
                       <div>
                         <h4 className="text-slate-900 font-bold serif italic text-base leading-tight">Virtual Tour</h4>
-                        <p className="text-slate-500 text-[10px]">Explore our lab</p>
+                        <p className="text-slate-700 text-[10px]">Explore our lab</p>
                       </div>
                     </div>
                   </a>
@@ -181,7 +181,7 @@ const HomeView: React.FC = () => {
             <div className="bg-slate-50 border border-slate-100 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 serif italic leading-tight">Join the Leigh Group</h3>
-                <p className="text-slate-600 max-w-xl text-sm leading-relaxed">
+                <p className="text-slate-700 max-w-xl text-sm leading-relaxed">
                   Interested in joining the Leigh group as a PhD student or postdoctoral researcher? We are always looking for brilliant minds to join our Manchester laboratory.
                 </p>
               </div>

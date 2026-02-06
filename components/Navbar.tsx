@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                   key={item.label}
                   href={item.href}
                   className={`transition-all text-[9px] xl:text-[10px] font-bold uppercase tracking-[0.2em] relative py-1 ${
-                    isActive ? 'text-[#660099]' : 'text-slate-500 hover:text-slate-900'
+                    isActive ? 'text-[#660099]' : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
                   {item.label}
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-slate-600 hover:text-[#660099] transition-colors z-[60] rounded-lg bg-slate-100"
+            className="lg:hidden p-2 text-slate-700 hover:text-[#660099] transition-colors z-[60] rounded-lg bg-slate-100"
             aria-label="Toggle navigation menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                       href={item.href}
                       onClick={closeMenu}
                       className={`text-lg font-bold uppercase tracking-[0.15em] serif italic transition-all py-4 flex items-center justify-center gap-3 ${
-                        isActive ? 'text-[#660099]' : 'text-slate-500 hover:text-slate-900'
+                        isActive ? 'text-[#660099]' : 'text-slate-700 hover:text-slate-950'
                       }`}
                     >
                       {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#ffcc00]" />}
@@ -115,8 +115,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
               </div>
 
               <div className="mt-10 pt-10 border-t border-slate-100 flex flex-col gap-6 w-full items-center">
-                <img src="https://www.catenane.net/images/UoM_logo.png" alt="University of Manchester" className="h-10 opacity-60" />
-                <p className="text-[9px] text-slate-400 uppercase tracking-[0.3em] font-bold text-center">
+                <img src="https://www.catenane.net/images/UoM_logo.png" alt="University of Manchester" className="h-10 opacity-80" />
+                <p className="text-[9px] text-slate-500 uppercase tracking-[0.3em] font-bold text-center">
                   Sir Samuel Hall Chair<br/>University of Manchester
                 </p>
               </div>

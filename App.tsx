@@ -55,7 +55,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-purple-500 selection:text-white bg-purple-gradient text-slate-800">
+    <div className="min-h-screen flex flex-col selection:bg-purple-500 selection:text-white bg-purple-gradient text-slate-900">
       <Navbar currentSlug={route.view} />
 
       <main className="flex-grow">
@@ -95,7 +95,7 @@ const App: React.FC = () => {
                 </div>
                 <span className="text-slate-900 font-bold text-3xl tracking-tight serif italic">Leigh Group</span>
               </div>
-              <p className="text-slate-500 max-w-sm leading-relaxed text-sm">
+              <p className="text-slate-700 max-w-sm leading-relaxed text-sm">
                 Synthesis of interlocked architectures and molecular-level machines. 
                 Pushing the boundaries of molecular topology at the University of Manchester.
               </p>
@@ -103,7 +103,7 @@ const App: React.FC = () => {
             
             <div>
               <h4 className="text-slate-900 font-bold mb-6 text-xs uppercase tracking-widest text-[#660099]">Navigation</h4>
-              <ul className="space-y-4 text-sm text-slate-600">
+              <ul className="space-y-4 text-sm text-slate-800">
                 {NAV_ITEMS.map(n => {
                    const itemSlug = n.href.replace(/^#\//, '');
                    const isActive = route.view === itemSlug;
@@ -120,8 +120,8 @@ const App: React.FC = () => {
 
             <div>
               <h4 className="text-slate-900 font-bold mb-6 text-xs uppercase tracking-widest text-[#660099]">Location</h4>
-              <div className="text-sm text-slate-500 leading-relaxed text-[11px] space-y-2">
-                <p className="font-bold text-slate-800">Manchester Institute of Biotechnology</p>
+              <div className="text-sm text-slate-700 leading-relaxed text-[11px] space-y-2">
+                <p className="font-bold text-slate-900">Manchester Institute of Biotechnology</p>
                 <p>The University of Manchester</p>
                 <p>131 Princess Street</p>
                 <p>Manchester, M1 7DN, UK</p>
@@ -129,9 +129,9 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-slate-400 uppercase tracking-[0.4em] font-bold">
+          <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-slate-500 uppercase tracking-[0.4em] font-bold">
             <div className="text-center md:text-left">© 2026 Leigh Research Group | University of Manchester</div>
-            <div className="flex gap-8 opacity-60">
+            <div className="flex gap-8 opacity-90">
                <a href="https://www.catenane.net" target="_blank" className="hover:text-[#660099] transition-colors">Original Site</a>
                <a href="#" className="hover:text-[#660099] transition-colors">Legal</a>
             </div>
