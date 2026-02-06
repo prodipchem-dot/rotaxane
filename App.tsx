@@ -9,6 +9,7 @@ import PeopleView from './PeopleView';
 import PublicationsView from './PublicationsView';
 import VirtualTourView from './VirtualTourView';
 import GroupMattersView from './GroupMattersView';
+import SupramolecularWorldView from './SupramolecularWorldView';
 import { NAV_ITEMS } from './constants';
 
 const App: React.FC = () => {
@@ -49,6 +50,7 @@ const App: React.FC = () => {
       case 'publications': return <PublicationsView />;
       case 'vtour': return <VirtualTourView />;
       case 'matters': return <GroupMattersView />;
+      case 'world': return <SupramolecularWorldView />;
       case 'home':
       default: return <HomeView />;
     }
@@ -59,7 +61,6 @@ const App: React.FC = () => {
       <Navbar currentSlug={route.view} />
 
       <main className="flex-grow">
-        {/* PARTNER LOGOS SECTION - UoM Logo removed as requested */}
         <section className="pt-20 md:pt-24 pb-2 container mx-auto px-4 md:px-6">
            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-8">
              <div className="flex gap-4 md:gap-6 items-center flex-wrap justify-center lg:justify-start">

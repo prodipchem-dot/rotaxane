@@ -16,7 +16,6 @@ export interface Message {
   content: string;
 }
 
-// Added TeamMember interface to fix import errors in constants and views
 export interface TeamMember {
   name: string;
   grad: string;
@@ -24,7 +23,6 @@ export interface TeamMember {
   email?: string;
 }
 
-// Added ProjectDetail interface for research project narrative data
 export interface ProjectDetail {
   slug: string;
   citation: string;
@@ -50,4 +48,11 @@ export interface Publication {
 export interface YearGroup {
   year: string;
   papers: Publication[];
+}
+
+export interface WorldResearcher {
+  name: string;
+  institution: string;
+  url: string;
+  region: string;
 }

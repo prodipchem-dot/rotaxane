@@ -2,7 +2,7 @@
 import React from 'react';
 import { HIGHLIGHTS } from './constants';
 import { 
-  Zap, ChevronRight, Binary, FlaskConical, Users, Book, Eye, Map as MapIcon, ExternalLink, ArrowRight
+  Zap, ChevronRight, Binary, FlaskConical, Users, Book, Eye, Map as MapIcon, ExternalLink, ArrowRight, Globe
 } from 'lucide-react';
 
 const HomeView: React.FC = () => {
@@ -136,7 +136,7 @@ const HomeView: React.FC = () => {
                 </div>
               </div>
 
-              {/* PROFESSOR BIO / SIDEBAR */}
+              {/* SIDEBAR NAVIGATION BUTTONS */}
               <div className="lg:col-span-4 space-y-10">
                 <div className="bg-slate-900 border border-purple-500/10 rounded-[3.5rem] p-10 overflow-hidden relative group">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-3xl rounded-full"></div>
@@ -170,6 +170,8 @@ const HomeView: React.FC = () => {
                       <p className="text-yellow-400 text-[8px] font-bold uppercase tracking-widest">Leigh Group 2025</p>
                     </div>
                   </a>
+                  
+                  {/* VIRTUAL TOUR BUTTON */}
                   <a href="#/vtour" className="group bg-slate-900/50 border border-white/5 p-6 rounded-[2.5rem] hover:border-purple-500/30 transition-all">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-xl bg-purple-900/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-all">
@@ -178,6 +180,19 @@ const HomeView: React.FC = () => {
                       <div>
                         <h4 className="text-white font-bold serif italic text-base leading-tight">Virtual Tour</h4>
                         <p className="text-slate-500 text-[10px]">Explore our lab</p>
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* WORLD OF MOLECULAR MACHINES BUTTON - PLACED BELOW VIRTUAL TOUR */}
+                  <a href="#/world" className="group bg-slate-900/50 border border-white/5 p-6 rounded-[2.5rem] hover:border-yellow-400/30 transition-all">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-yellow-900/20 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-400 group-hover:text-slate-950 transition-all">
+                        <Globe size={20} />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold serif italic text-base leading-tight">Supramolecular World</h4>
+                        <p className="text-slate-500 text-[10px]">Molecular Machines Research</p>
                       </div>
                     </div>
                   </a>
