@@ -48,7 +48,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
             </div>
             <div className="flex flex-col justify-center border-l border-white/10 pl-3 md:pl-4">
               <span className="text-white font-bold text-base md:text-xl tracking-tighter block leading-none font-century uppercase italic">LEIGH GROUP</span>
-              <span className="text-yellow-400 text-[7px] md:text-[9px] uppercase tracking-widest font-bold hidden sm:block">Molecular Magic @ Manchester</span>
             </div>
           </a>
           

@@ -391,25 +391,8 @@ const PublicationsView: React.FC = () => {
       <section className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
             
-            {/* LEFT COLUMN: STATISTICS/QUICK INFO */}
+            {/* LEFT COLUMN: QUICK INFO */}
             <aside className="lg:col-span-3 hidden lg:block sticky top-48 space-y-12">
-                <div className="space-y-6">
-                    <div className="space-y-2">
-                        <h4 className="text-white font-bold text-[10px] uppercase tracking-widest">Bibliography Stats</h4>
-                        <div className="h-0.5 w-12 bg-yellow-400"></div>
-                    </div>
-                    <div className="grid grid-cols-1 gap-3">
-                        <div className="p-5 bg-slate-900/30 rounded-2xl border border-white/5">
-                            <span className="block text-2xl font-bold text-white serif italic">500+</span>
-                            <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Total Papers</span>
-                        </div>
-                        <div className="p-5 bg-slate-900/30 rounded-2xl border border-white/5">
-                            <span className="block text-2xl font-bold text-white serif italic">30+</span>
-                            <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Nature/Science</span>
-                        </div>
-                    </div>
-                </div>
-
                 <div className="bg-[#660099]/5 border border-purple-500/10 p-6 rounded-[2rem] space-y-4">
                     <p className="text-[10px] text-slate-400 italic leading-relaxed">
                         "The synthesis of interlocked architectures is like architectural engineering on the molecular scale."
