@@ -14,7 +14,7 @@ const HomeView: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-6">
               <h1 className="text-7xl md:text-9xl font-bold leading-[0.85] serif italic text-white text-glow-purple">
-                Welcome <br /> <span className="text-yellow-400">Leigh Group</span>
+                Welcome <br /> <span className="text-yellow-400 font-century not-italic tracking-tighter uppercase">Leigh Group</span>
               </h1>
               <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed font-light">
                 Exploring fundamental ways to control <span className="text-white font-medium">molecular-level dynamics and topology</span>.

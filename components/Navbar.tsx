@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
               <Hexagon className="text-white w-5 h-5 md:w-6 md:h-6" />
             </div>
             <div className="flex flex-col justify-center">
-              <span className="text-white font-bold text-base md:text-xl tracking-tight block leading-none serif italic">LEIGH GROUP</span>
+              <span className="text-white font-bold text-base md:text-xl tracking-tighter block leading-none font-century uppercase">LEIGH GROUP</span>
               <span className="text-yellow-400 text-[7px] md:text-[9px] uppercase tracking-widest font-bold hidden sm:block">Molecular Magic @ Manchester</span>
             </div>
           </a>

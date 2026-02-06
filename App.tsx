@@ -94,7 +94,7 @@ const App: React.FC = () => {
                 <div className="p-3 bg-[#660099] rounded-2xl">
                   <Hexagon className="text-white w-8 h-8" />
                 </div>
-                <span className="text-white font-bold text-3xl tracking-tight serif italic">Leigh Group</span>
+                <span className="text-white font-bold text-3xl tracking-tighter font-century uppercase">Leigh Group</span>
               </div>
               <p className="text-slate-500 max-w-sm leading-relaxed text-sm">
                 Synthesis of interlocked architectures and molecular-level machines. 
