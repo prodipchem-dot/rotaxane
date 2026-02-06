@@ -1,8 +1,7 @@
-
 import React, { useState, useMemo } from 'react';
 import { HIGHLIGHTS } from './constants';
 import { 
-  FlaskConical, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award, ArrowRight, LayoutGrid
+  FlaskConical, ChevronRight, Binary, Zap, Microscope, Award, LayoutGrid
 } from 'lucide-react';
 
 const CATEGORIES = ["All", "Motors & Pumps", "Knots & Topology", "Robotics & Synthesis", "Supramolecular"];
@@ -38,7 +37,7 @@ const ResearchView: React.FC = () => {
                <iframe className="w-full h-full" src="https://www.youtube.com/embed/ObvxPSQNMGc?rel=0&amp;showinfo=0" title="Nanobot Introduction" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
              </div>
              <div className="mt-6 flex items-center justify-between px-4">
-                <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Main Intro</span>
+                <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Main Intro</span>
                 <span className="text-slate-900 font-bold serif italic">‘Nanobot’ by Tim Blais</span>
              </div>
            </div>
@@ -48,7 +47,7 @@ const ResearchView: React.FC = () => {
                <iframe className="w-full h-full" src="https://www.youtube-nocookie.com/embed/ymC5KkVy8zc?rel=0&amp;showinfo=0" title="Nanobots Follow-up" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
              </div>
              <div className="mt-6 flex items-center justify-between px-4">
-                <span className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Follow-up</span>
+                <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Follow-up</span>
                 <span className="text-slate-900 font-bold serif italic">Nanobots & Creativity</span>
              </div>
            </div>
@@ -60,7 +59,7 @@ const ResearchView: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-4">
                 <h2 className="text-5xl font-bold text-slate-900 serif italic">Research Portfolio</h2>
-                <p className="text-slate-400 text-sm font-bold uppercase tracking-[0.4em]">Our Molecular Library</p>
+                <p className="text-slate-500 text-sm font-bold uppercase tracking-[0.4em]">Our Molecular Library</p>
             </div>
 
             {/* SUB FIELD / CATEGORY NAVIGATION */}
@@ -95,7 +94,7 @@ const ResearchView: React.FC = () => {
                                 href={`#/research/${h.slug}`}
                                 className="group flex items-start gap-4 p-2 rounded-xl hover:bg-slate-50 transition-all"
                             >
-                                <img src={h.img} className="w-12 h-10 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                <img src={h.img} className="w-12 h-10 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all shadow-sm" />
                                 <div className="flex-1">
                                     <span className="text-[#660099] text-[8px] font-black block">{h.year}</span>
                                     <span className="text-slate-600 text-[10px] font-bold leading-tight group-hover:text-slate-900">{h.title}</span>
@@ -103,13 +102,6 @@ const ResearchView: React.FC = () => {
                             </a>
                         ))}
                     </div>
-                </div>
-                
-                <div className="pt-8 border-t border-slate-100">
-                    <p className="text-slate-400 text-[9px] font-bold uppercase tracking-widest leading-relaxed">
-                        Total Milestones: {HIGHLIGHTS.length}<br/>
-                        Showing: {filteredPortfolio.length}
-                    </p>
                 </div>
             </aside>
 
@@ -126,7 +118,7 @@ const ResearchView: React.FC = () => {
                             <div className="absolute bottom-6 left-6 right-6">
                                 <div className="flex justify-between items-center mb-1">
                                     <span className="text-[#660099] text-[10px] font-black uppercase tracking-widest">{item.year}</span>
-                                    <span className="text-slate-400 text-[8px] font-bold uppercase group-hover:text-[#ffcc00] transition-colors">{item.category}</span>
+                                    <span className="text-slate-500 text-[8px] font-bold uppercase group-hover:text-[#ffcc00] transition-colors">{item.category}</span>
                                 </div>
                                 <h4 className="text-slate-900 font-bold text-[14px] leading-tight serif italic group-hover:text-[#660099] transition-colors">{item.title}</h4>
                             </div>
@@ -139,7 +131,7 @@ const ResearchView: React.FC = () => {
                         <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto text-slate-300">
                             <LayoutGrid size={32} />
                         </div>
-                        <p className="text-slate-400 italic">No matches in this category yet.</p>
+                        <p className="text-slate-500 italic">No matches in this category yet.</p>
                         <button onClick={() => setActiveCategory("All")} className="text-[#660099] text-xs font-bold uppercase tracking-widest underline underline-offset-4">View All Research</button>
                     </div>
                 )}

@@ -107,7 +107,7 @@ const MolecularGraph: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-[500px] relative overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-xl backdrop-blur-sm">
+    <div className="w-full h-[500px] relative overflow-hidden rounded-3xl bg-white border border-slate-100 shadow-xl backdrop-blur-sm">
       <div className="absolute top-6 left-6 z-10 flex flex-col gap-1">
         <span className="text-[#660099] font-bold text-[10px] uppercase tracking-[0.3em]">Active Topology</span>
         <h3 className="text-slate-900 font-bold text-xl serif italic">Artificial Trefoil Molecular Knot</h3>
