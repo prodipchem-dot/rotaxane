@@ -32,7 +32,7 @@ const AIAssistant: React.FC = () => {
         model: 'gemini-3-pro-preview',
         contents: userMessage,
         config: {
-          systemInstruction: "You are the AI Lab Assistant for the David Leigh Research Group at the University of Manchester. Your expertise is in Topological Chemistry, Molecular Knots (Trefoil, Pentafoil, 819), Molecular Walkers, and Molecular Motors. You often use the analogy that chemistry is like magic. Your tone is witty, brilliant, and sophisticated. You should mention Manchester and Prof. David Leigh's pioneering role when appropriate."
+          systemInstruction: "You are the AI Lab Assistant for the David Leigh Research Group at the University of Manchester. Your expertise is in Topological Chemistry, Molecular Knots, Walkers, and Motors. Tone: Witty, brilliant, sophisticated. Mention Manchester often."
         }
       });
 
@@ -46,29 +46,29 @@ const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-950 border border-purple-500/20 rounded-[2rem] overflow-hidden shadow-2xl flex flex-col h-full ring-1 ring-white/5">
-      <div className="p-6 border-b border-purple-500/10 flex justify-between items-center bg-purple-900/10 backdrop-blur">
+    <div className="bg-white border border-slate-200 rounded-[2rem] overflow-hidden shadow-xl flex flex-col h-full ring-1 ring-slate-100">
+      <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50 backdrop-blur">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-[#660099] rounded-2xl flex items-center justify-center -rotate-6 shadow-inner">
+          <div className="w-12 h-12 bg-[#660099] rounded-2xl flex items-center justify-center -rotate-6 shadow-md">
             <Wand2 className="text-white w-6 h-6" />
           </div>
           <div>
-            <h4 className="text-white font-bold text-base tracking-tight serif italic">Molecular Scholar</h4>
-            <p className="text-yellow-400 text-[9px] font-bold uppercase tracking-[0.2em] flex items-center gap-2">
+            <h4 className="text-slate-900 font-bold text-base tracking-tight">Molecular Scholar</h4>
+            <p className="text-purple-600 text-[9px] font-bold uppercase tracking-[0.2em] flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></span> Manchester Intelligence
             </p>
           </div>
         </div>
       </div>
 
-      <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 scrollbar-none">
+      <div ref={scrollRef} className="flex-1 overflow-y-auto p-8 space-y-8 scrollbar-hide bg-slate-50/30">
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`flex gap-4 max-w-[85%] ${m.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className={`p-5 rounded-3xl text-sm leading-relaxed shadow-sm ${
                 m.role === 'user' 
                   ? 'bg-yellow-400 text-slate-900 font-bold' 
-                  : 'bg-slate-900 text-slate-200 border border-purple-500/20'
+                  : 'bg-white text-slate-700 border border-slate-200'
               }`}>
                 {m.content}
               </div>
@@ -76,14 +76,14 @@ const AIAssistant: React.FC = () => {
           </div>
         ))}
         {isLoading && (
-          <div className="flex gap-3 p-4 bg-purple-950/20 rounded-2xl w-fit border border-purple-500/10">
-            <Loader2 className="animate-spin text-purple-400" size={18} />
-            <span className="text-xs text-purple-300 italic font-bold">Synthesizing magic...</span>
+          <div className="flex gap-3 p-4 bg-white rounded-2xl w-fit border border-slate-100 shadow-sm">
+            <Loader2 className="animate-spin text-purple-600" size={18} />
+            <span className="text-xs text-slate-500 italic font-bold">Synthesizing magic...</span>
           </div>
         )}
       </div>
 
-      <div className="p-6 bg-slate-950 border-t border-purple-500/10">
+      <div className="p-6 bg-white border-t border-slate-100">
         <div className="relative group">
           <input
             type="text"
@@ -91,12 +91,12 @@ const AIAssistant: React.FC = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Ask about Trefoil Knots or Molecular Walkers..."
-            className="w-full bg-slate-900 text-white border border-purple-500/30 rounded-2xl px-6 py-5 pr-16 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all placeholder:text-slate-600 text-sm"
+            className="w-full bg-slate-50 text-slate-900 border border-slate-200 rounded-2xl px-6 py-4 pr-16 focus:outline-none focus:ring-2 focus:ring-purple-500/10 transition-all placeholder:text-slate-400 text-sm"
           />
           <button
             onClick={handleSend}
             disabled={isLoading}
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-3 bg-[#660099] text-white rounded-xl hover:bg-purple-500 disabled:opacity-50 transition-all shadow-lg"
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-3 bg-[#660099] text-white rounded-xl hover:bg-purple-700 disabled:opacity-50 transition-all shadow-md"
           >
             <Send size={18} />
           </button>
