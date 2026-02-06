@@ -57,7 +57,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-purple-500 selection:text-white bg-purple-gradient text-slate-200">
+    <div className="min-h-screen flex flex-col selection:bg-purple-500 selection:text-white bg-purple-gradient text-slate-800">
       <Navbar currentSlug={route.view} />
 
       <main className="flex-grow">
@@ -65,10 +65,10 @@ const App: React.FC = () => {
            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-8">
              <div className="flex gap-4 md:gap-6 items-center flex-wrap justify-center lg:justify-start">
                <a href="https://www.ucl.ac.uk/sustainable/take-action/staff-action/leaf-laboratory-efficiency-assessment-framework" target="_blank" rel="noreferrer">
-                 <img src="https://www.catenane.net/images/Leaflogo.jpg" alt="LEAF Logo" className="h-10 md:h-12 rounded-lg shadow-lg hover:scale-105 transition-transform" />
+                 <img src="https://www.catenane.net/images/Leaflogo.jpg" alt="LEAF Logo" className="h-10 md:h-12 rounded-lg shadow-md hover:scale-105 transition-transform" />
                </a>
                <a href="https://www.catenane.net/pages/video_CAMERA_motor.html" target="_blank" rel="noreferrer">
-                 <img src="https://www.catenane.net/images/CAMERA_banner.jpg" alt="CAMERA Banner" className="h-10 md:h-12 rounded-lg shadow-lg hover:scale-105 transition-transform" />
+                 <img src="https://www.catenane.net/images/CAMERA_banner.jpg" alt="CAMERA Banner" className="h-10 md:h-12 rounded-lg shadow-md hover:scale-105 transition-transform" />
                </a>
              </div>
            </div>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      <footer className="bg-slate-950 border-t border-purple-500/10 pt-20 md:pt-32 pb-16 mt-20">
+      <footer className="bg-white border-t border-slate-200 pt-20 md:pt-32 pb-16 mt-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-24">
             <div className="md:col-span-2 space-y-8">
@@ -87,26 +87,26 @@ const App: React.FC = () => {
                 <img 
                   src="https://www.catenane.net/images/UoM_logo.png" 
                   alt="Manchester Brand" 
-                  className="h-10 w-auto brightness-0 invert opacity-100" 
+                  className="h-10 w-auto opacity-100" 
                 />
-                <div className="h-8 w-px bg-white/10 mx-2"></div>
-                <span className="text-white font-bold text-3xl tracking-tighter font-century uppercase italic">Leigh Group</span>
+                <div className="h-8 w-px bg-slate-200 mx-2"></div>
+                <span className="text-slate-900 font-bold text-3xl tracking-tighter font-century uppercase italic">Leigh Group</span>
               </div>
-              <p className="text-slate-500 max-w-sm leading-relaxed text-sm">
+              <p className="text-slate-600 max-w-sm leading-relaxed text-sm">
                 Synthesis of interlocked architectures and molecular-level machines. 
                 Pushing the boundaries of molecular topology at the University of Manchester.
               </p>
             </div>
             
             <div>
-              <h4 className="text-white font-bold mb-6 text-xs uppercase tracking-widest text-yellow-400">Navigation</h4>
-              <ul className="space-y-4 text-sm text-slate-500">
+              <h4 className="text-slate-900 font-bold mb-6 text-xs uppercase tracking-widest text-[#660099]">Navigation</h4>
+              <ul className="space-y-4 text-sm text-slate-600">
                 {NAV_ITEMS.map(n => {
                    const itemSlug = n.href.replace(/^#\//, '');
                    const isActive = route.view === itemSlug;
                    return (
                     <li key={n.label}>
-                      <a href={n.href} className={`hover:text-white transition-colors ${isActive ? 'text-yellow-400 font-bold' : ''}`}>
+                      <a href={n.href} className={`hover:text-[#660099] transition-colors ${isActive ? 'text-[#660099] font-bold' : ''}`}>
                         {n.label}
                       </a>
                     </li>
@@ -116,9 +116,9 @@ const App: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6 text-xs uppercase tracking-widest text-yellow-400">Location</h4>
-              <div className="text-sm text-slate-500 leading-relaxed text-[11px] space-y-2">
-                <p className="font-bold text-slate-300">Manchester Institute of Biotechnology</p>
+              <h4 className="text-slate-900 font-bold mb-6 text-xs uppercase tracking-widest text-[#660099]">Location</h4>
+              <div className="text-sm text-slate-600 leading-relaxed text-[11px] space-y-2">
+                <p className="font-bold text-slate-800">Manchester Institute of Biotechnology</p>
                 <p>The University of Manchester</p>
                 <p>131 Princess Street</p>
                 <p>Manchester, M1 7DN, UK</p>
@@ -126,11 +126,11 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className="pt-12 border-t border-purple-500/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-slate-700 uppercase tracking-[0.4em] font-bold">
+          <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-slate-400 uppercase tracking-[0.4em] font-bold">
             <div className="text-center md:text-left">© 2026 Leigh Research Group | University of Manchester</div>
-            <div className="flex gap-8 opacity-50">
-               <a href="https://www.catenane.net" target="_blank" className="hover:text-slate-200 transition-colors">Original Site</a>
-               <a href="#" className="hover:text-slate-200 transition-colors">Legal</a>
+            <div className="flex gap-8 opacity-70">
+               <a href="https://www.catenane.net" target="_blank" className="hover:text-slate-900 transition-colors">Original Site</a>
+               <a href="#" className="hover:text-slate-900 transition-colors">Legal</a>
             </div>
           </div>
         </div>
