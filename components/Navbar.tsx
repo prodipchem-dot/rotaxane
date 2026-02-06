@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200 py-3 md:py-4">
+      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200 py-3 md:py-4">
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <a href="#/home" className="flex items-center gap-3 md:gap-4 group cursor-pointer z-[60]" onClick={closeMenu}>
             <div className="flex-shrink-0">
@@ -57,12 +57,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                   key={item.label}
                   href={item.href}
                   className={`transition-all text-[10.5px] xl:text-[11.5px] font-bold uppercase tracking-[0.2em] relative py-1 ${
-                    isActive ? 'text-[#660099]' : 'text-slate-500 hover:text-slate-900'
+                    isActive ? 'text-slate-900' : 'text-slate-500 hover:text-slate-800'
                   }`}
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#ffcc00] rounded-full animate-in fade-in slide-in-from-left-1 duration-300"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#660099] rounded-full"></span>
                   )}
                 </a>
               );
@@ -101,10 +101,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentSlug }) => {
                       href={item.href}
                       onClick={closeMenu}
                       className={`text-lg font-bold uppercase tracking-[0.15em] serif italic transition-all py-4 flex items-center justify-center gap-3 ${
-                        isActive ? 'text-[#660099]' : 'text-slate-500 hover:text-slate-900'
+                        isActive ? 'text-slate-900' : 'text-slate-500 hover:text-slate-800'
                       }`}
                     >
-                      {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#ffcc00]" />}
+                      {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#660099]" />}
                       {item.label}
                     </a>
                   );

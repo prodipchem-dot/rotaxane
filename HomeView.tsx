@@ -12,7 +12,7 @@ const HomeView: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight serif italic text-slate-900 whitespace-nowrap">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight serif italic text-slate-900 text-glow-purple whitespace-nowrap">
                 Welcome to <span className="text-[#660099] font-century not-italic tracking-tighter uppercase">Leigh Group</span>
               </h1>
               <p className="text-slate-600 text-xl max-w-2xl mx-auto leading-relaxed font-light">
@@ -82,7 +82,7 @@ const HomeView: React.FC = () => {
                         <span className="text-[#660099] text-[9px] font-black uppercase tracking-widest">{item.year}</span>
                         <ChevronRight size={12} className="text-slate-300 group-hover:text-[#660099] group-hover:translate-x-1 transition-all flex-shrink-0" />
                       </div>
-                      <h4 className="text-slate-600 font-bold text-[11px] lg:text-[12px] leading-[1.3] group-hover:text-slate-900 transition-colors">
+                      <h4 className="text-slate-700 font-bold text-[11px] lg:text-[12px] leading-[1.3] group-hover:text-slate-900 transition-colors">
                         {item.title}
                       </h4>
                     </div>
@@ -104,7 +104,7 @@ const HomeView: React.FC = () => {
                   <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
                     <p>
                       Our group explores, invents and discovers fundamental ways to control molecular-level dynamics and topology. 
-                      This includes strategies and methods to synthesize interlocked molecular architectures, molecular machinery, ratchet mechanisms, and topological structures.
+                      This includes strategies and methods to synthesize interlocked molecular architectures, molecular machinery, molecular ratchet mechanisms, molecular knotting, assemblers, robotics and weaving.
                     </p>
                     
                     <div className="space-y-4 pt-4">
@@ -115,25 +115,24 @@ const HomeView: React.FC = () => {
                     </div>
 
                     <p>
-                      Perhaps the best way to appreciate the technological potential of controlled molecular-level motion is to recognise that nanomotors and molecular-level machines lie at the heart of every significant biological process. Nature has evolved these solutions over billions of years.
+                      Perhaps the best way to appreciate the technological potential of controlled molecular-level motion is to recognise that nanomotors and molecular-level machines lie at the heart of every significant biological process. Over billions of years of evolution Nature has not repeatedly chosen this solution for achieving complex task performance without good reason.
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-12">
                   <div className="rounded-[3rem] overflow-hidden border border-slate-200 shadow-xl bg-white p-4">
-                    <img src="https://www.catenane.net/images/general/research-map.png" alt="Research Map" className="w-full h-auto" />
+                    <img src="https://www.catenane.net/images/general/research-map.png" alt="Research Map" className="w-full h-auto opacity-90" />
                   </div>
                 </div>
               </div>
 
               <div className="lg:col-span-4 space-y-10">
                 <div className="bg-white border border-slate-200 rounded-[3.5rem] p-10 overflow-hidden relative group shadow-lg">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-3xl rounded-full"></div>
                   <img 
                     src="https://www.catenane.net/images/general/daveleigh2006.jpg" 
                     alt="Professor David Leigh" 
-                    className="w-full aspect-square rounded-[2.5rem] object-cover mb-8 shadow-md border border-slate-100 transition-all duration-700"
+                    className="w-full aspect-square rounded-[2.5rem] object-cover mb-8 shadow-md border border-slate-100 grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   <h3 className="text-2xl font-bold text-slate-900 serif italic mb-2">Prof. David A. Leigh</h3>
                   <p className="text-[#660099] text-[9px] font-bold uppercase tracking-[0.3em] mb-8">FRS FRSE FRSC MAE</p>
@@ -141,7 +140,7 @@ const HomeView: React.FC = () => {
                     <a href="#/prof" className="flex items-center justify-between w-full bg-[#660099] text-white px-6 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest hover:bg-purple-700 transition-all group/btn shadow-md">
                       Full Bio & CV <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                     </a>
-                    <a href="https://scholar.google.co.uk/citations?user=jLubszkAAAAJ&hl=en" target="_blank" className="flex items-center justify-between w-full bg-slate-50 text-slate-500 px-6 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest border border-slate-200 hover:border-[#660099] hover:text-[#660099] transition-all">
+                    <a href="https://scholar.google.co.uk/citations?user=jLubszkAAAAJ&hl=en" target="_blank" className="flex items-center justify-between w-full bg-slate-50 text-slate-600 px-6 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest border border-slate-200 hover:border-[#660099] transition-all">
                       Scholar <ExternalLink size={12} />
                     </a>
                   </div>
@@ -154,7 +153,7 @@ const HomeView: React.FC = () => {
                       alt="Leigh Group 2025" 
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
                     <div className="absolute bottom-5 left-6">
                       <h4 className="text-slate-900 font-bold serif italic text-lg">The Team</h4>
                       <p className="text-[#660099] text-[8px] font-bold uppercase tracking-widest">Leigh Group 2025</p>
@@ -188,7 +187,7 @@ const HomeView: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-[#660099]/5 border border-[#660099]/10 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-slate-50 border border-slate-200 rounded-[3rem] p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 serif italic leading-tight">Join the Leigh Group</h3>
                 <p className="text-slate-600 max-w-xl text-sm leading-relaxed">
