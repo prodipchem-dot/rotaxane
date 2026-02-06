@@ -104,48 +104,61 @@ const ResearchView: React.FC = () => {
             <p className="text-slate-500 text-sm font-bold uppercase tracking-[0.4em]">Explore our molecular library</p>
         </div>
 
-        {/* REQUESTED SUB-FIELD: QUICK LINKS BAR */}
-        <div className="sticky top-20 z-40 bg-slate-950/80 backdrop-blur-xl py-4 border-y border-white/5 -mx-6 px-6 shadow-xl">
-          <div className="flex overflow-x-auto gap-4 scrollbar-hide py-2">
-            <span className="text-[9px] font-bold uppercase tracking-widest text-slate-600 whitespace-nowrap self-center mr-4">Quick Access:</span>
-            {HIGHLIGHTS.map(h => (
-              <a 
-                key={h.slug} 
-                href={`#/research/${h.slug}`} 
-                className="bg-slate-900 border border-white/10 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white hover:border-yellow-400/50 transition-all whitespace-nowrap"
-              >
-                {h.title}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {HIGHLIGHTS.map((item, idx) => (
-                <a 
-                    key={idx} 
-                    href={`#/research/${item.slug}`} 
-                    className="group relative block rounded-[2.5rem] overflow-hidden border border-white/5 bg-slate-900 aspect-[4/3] hover:border-purple-500/50 transition-all duration-500 shadow-lg hover:shadow-purple-500/10"
-                >
-                    <img 
-                        src={item.img} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
-                        onError={(e) => { e.currentTarget.src = "https://www.catenane.net/images/graphical_abstracts/placeholder.jpg" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
-                    
-                    <div className="absolute bottom-6 left-6 right-6 space-y-2">
-                        <div className="flex items-center justify-between">
-                            <span className="text-yellow-400 text-[10px] font-black uppercase tracking-widest">{item.year}</span>
-                            <ChevronRight size={14} className="text-purple-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                        </div>
-                        <h4 className="text-white font-bold text-[13px] leading-tight serif italic group-hover:text-yellow-400 transition-colors">
-                            {item.title}
-                        </h4>
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+            {/* STICKY SIDEBAR SUB-NAV */}
+            <aside className="lg:col-span-3 sticky top-28 space-y-6">
+                <div className="space-y-1">
+                    <h3 className="text-white font-bold text-xs uppercase tracking-[0.3em] mb-4">Chronological Index</h3>
+                    <div className="flex flex-col border-l border-white/5 pl-4 gap-2">
+                        {HIGHLIGHTS.map(h => (
+                            <a 
+                                key={h.slug} 
+                                href={`#/research/${h.slug}`}
+                                className="group flex flex-col py-2 border-b border-transparent hover:border-purple-500/20 transition-all"
+                            >
+                                <span className="text-yellow-400 text-[8px] font-black uppercase tracking-widest">{h.year}</span>
+                                <span className="text-slate-400 text-[11px] group-hover:text-white transition-colors">{h.title}</span>
+                            </a>
+                        ))}
                     </div>
-                </a>
-            ))}
+                </div>
+                <div className="p-6 bg-purple-900/5 rounded-3xl border border-purple-500/10">
+                    <p className="text-[10px] text-slate-500 leading-relaxed italic">
+                        Click on any title to view high-resolution figures, full text, and animated simulations from the original scientific reports.
+                    </p>
+                </div>
+            </aside>
+
+            {/* PORTFOLIO GRID */}
+            <div className="lg:col-span-9">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {HIGHLIGHTS.map((item, idx) => (
+                        <a 
+                            key={idx} 
+                            href={`#/research/${item.slug}`} 
+                            className="group relative block rounded-[2.5rem] overflow-hidden border border-white/5 bg-slate-900 aspect-[4/3] hover:border-purple-500/50 transition-all duration-500 shadow-lg hover:shadow-purple-500/10"
+                        >
+                            <img 
+                                src={item.img} 
+                                alt={item.title} 
+                                className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                                onError={(e) => { e.currentTarget.src = "https://www.catenane.net/images/graphical_abstracts/placeholder.jpg" }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+                            
+                            <div className="absolute bottom-6 left-6 right-6 space-y-2">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-yellow-400 text-[10px] font-black uppercase tracking-widest">{item.year}</span>
+                                    <ChevronRight size={14} className="text-purple-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                                </div>
+                                <h4 className="text-white font-bold text-[13px] leading-tight serif italic group-hover:text-yellow-400 transition-colors">
+                                    {item.title}
+                                </h4>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
         </div>
       </section>
 
