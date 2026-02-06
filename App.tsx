@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomeView from './HomeView';
 import ProfLeighView from './ProfLeighView';
 import ResearchView from './ResearchView';
+import ResearchProjectView from './ResearchProjectView';
 import PeopleView from './PeopleView';
 import PublicationsView from './PublicationsView';
 import VirtualTourView from './VirtualTourView';
@@ -12,24 +13,24 @@ import { NAV_ITEMS } from './constants';
 import { Hexagon } from 'lucide-react';
 
 const App: React.FC = () => {
-  // Extract slug from hash: e.g. "#/research" -> "research"
   const getSlugFromHash = (hash: string) => {
-    const slug = hash.replace(/^#\//, '').split(/[?#]/)[0];
-    return slug || 'home';
+    const parts = hash.replace(/^#\//, '').split('/');
+    return {
+      view: parts[0] || 'home',
+      subSlug: parts[1] || null
+    };
   };
 
-  const [currentSlug, setCurrentSlug] = useState(() => getSlugFromHash(window.location.hash));
+  const [route, setRoute] = useState(() => getSlugFromHash(window.location.hash));
 
   useEffect(() => {
     const handleHashChange = () => {
-      const slug = getSlugFromHash(window.location.hash);
-      setCurrentSlug(slug);
+      const newRoute = getSlugFromHash(window.location.hash);
+      setRoute(newRoute);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     window.addEventListener('hashchange', handleHashChange);
-    
-    // Initial check: if no hash, set it to home
     if (!window.location.hash || !window.location.hash.startsWith('#/')) {
       window.location.hash = '#/home';
     }
@@ -38,7 +39,11 @@ const App: React.FC = () => {
   }, []);
 
   const renderView = () => {
-    switch (currentSlug) {
+    if (route.view === 'research' && route.subSlug) {
+      return <ResearchProjectView slug={route.subSlug} />;
+    }
+
+    switch (route.view) {
       case 'prof': return <ProfLeighView />;
       case 'research': return <ResearchView />;
       case 'people': return <PeopleView />;
@@ -52,11 +57,9 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-purple-500 selection:text-white bg-purple-gradient text-slate-200">
-      {/* Pass the current slug to Navbar for active highlighting */}
-      <Navbar currentSlug={currentSlug} />
+      <Navbar currentSlug={route.view} />
 
       <main className="flex-grow">
-        {/* SHARED HEADER LOGOS */}
         <section className="pt-28 pb-6 container mx-auto px-6 flex flex-wrap justify-between items-center gap-8">
            <div className="flex gap-6 items-center flex-wrap">
              <a href="https://www.ucl.ac.uk/sustainable/take-action/staff-action/leaf-laboratory-efficiency-assessment-framework" target="_blank" rel="noreferrer">
@@ -75,13 +78,11 @@ const App: React.FC = () => {
            </div>
         </section>
 
-        {/* Use the slug as the key to ensure React swaps components cleanly */}
-        <div key={currentSlug}>
+        <div key={`${route.view}-${route.subSlug || 'index'}`}>
           {renderView()}
         </div>
       </main>
 
-      {/* SHARED FOOTER */}
       <footer className="bg-slate-950 border-t border-purple-500/10 pt-32 pb-16 mt-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-16 mb-24">
@@ -103,7 +104,7 @@ const App: React.FC = () => {
               <ul className="space-y-4 text-sm text-slate-500">
                 {NAV_ITEMS.map(n => {
                    const itemSlug = n.href.replace(/^#\//, '');
-                   const isActive = currentSlug === itemSlug;
+                   const isActive = route.view === itemSlug;
                    return (
                     <li key={n.label}>
                       <a href={n.href} className={`hover:text-white transition-colors ${isActive ? 'text-yellow-400 font-bold' : ''}`}>

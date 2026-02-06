@@ -2,7 +2,7 @@
 import React from 'react';
 import { HIGHLIGHTS } from './constants';
 import { 
-  FlaskConical, Play, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award
+  FlaskConical, Play, MessageSquare, ChevronRight, Binary, Zap, Microscope, Award, ArrowRight
 } from 'lucide-react';
 
 const ResearchView: React.FC = () => {
@@ -92,23 +92,39 @@ const ResearchView: React.FC = () => {
         </div>
       </section>
 
-      {/* RESEARCH PORTFOLIO GRID */}
-      <section className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center space-y-6 mb-24">
+      {/* RESEARCH PORTFOLIO GRID & SUB-FIELD NAV */}
+      <section className="container mx-auto px-6 space-y-16">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="flex items-center justify-center gap-4 text-yellow-400 mb-4">
                 <div className="h-px w-12 bg-purple-500/30"></div>
                 <FlaskConical size={24} />
                 <div className="h-px w-12 bg-purple-500/30"></div>
             </div>
             <h2 className="text-5xl font-bold text-white serif italic">Research Portfolio</h2>
-            <p className="text-slate-500 text-sm font-bold uppercase tracking-[0.4em]">Click on the pictures to learn more</p>
+            <p className="text-slate-500 text-sm font-bold uppercase tracking-[0.4em]">Explore our molecular library</p>
+        </div>
+
+        {/* REQUESTED SUB-FIELD: QUICK LINKS BAR */}
+        <div className="sticky top-20 z-40 bg-slate-950/80 backdrop-blur-xl py-4 border-y border-white/5 -mx-6 px-6 shadow-xl">
+          <div className="flex overflow-x-auto gap-4 scrollbar-hide py-2">
+            <span className="text-[9px] font-bold uppercase tracking-widest text-slate-600 whitespace-nowrap self-center mr-4">Quick Access:</span>
+            {HIGHLIGHTS.map(h => (
+              <a 
+                key={h.slug} 
+                href={`#/research/${h.slug}`} 
+                className="bg-slate-900 border border-white/10 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white hover:border-yellow-400/50 transition-all whitespace-nowrap"
+              >
+                {h.title}
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {HIGHLIGHTS.map((item, idx) => (
                 <a 
                     key={idx} 
-                    href="#/research" 
+                    href={`#/research/${item.slug}`} 
                     className="group relative block rounded-[2.5rem] overflow-hidden border border-white/5 bg-slate-900 aspect-[4/3] hover:border-purple-500/50 transition-all duration-500 shadow-lg hover:shadow-purple-500/10"
                 >
                     <img 
