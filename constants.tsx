@@ -52,6 +52,41 @@ export interface ProjectDetail {
   figures: Figure[];
 }
 
+export interface TeamMember {
+  name: string;
+  grad: string;
+  img: string;
+  email?: string;
+}
+
+export const MANCHESTER_TEAM: TeamMember[] = [
+  { name: "Adam Lehchilli", grad: "MSci, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Adam.jpg" },
+  { name: "Alex Betts", grad: "MChem, University of Aberdeen, UK", img: "https://www.catenane.net/images/current_members/AlexB.jpg" },
+  { name: "Axel Troncossi", grad: "MChem, Wageningen University, Netherlands", img: "https://www.catenane.net/images/current_members/axelt.jpg" },
+  { name: "Chuan Gao", grad: "PhD, University of Strasbourg, France", img: "https://www.catenane.net/images/current_members/Chuan.jpg" },
+  { name: "Daniel Lucas Pinho Feitosa Couto", grad: "MSci, PSL University, France", img: "https://www.catenane.net/images/current_members/Daniel%20Lucas.jpg" },
+  { name: "Dr Daniel Tetlow", grad: "PhD, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/dan_web2.jpg" },
+  { name: "Emily Cramp", grad: "MSci, University of Birmingham, UK", img: "https://www.catenane.net/images/current_members/Emily.jpg" },
+  { name: "Dr Félix Hernández Culebras", grad: "PhD, Polymat, Spain", img: "https://www.catenane.net/images/current_members/Felix.jpg" },
+  { name: "Dr Huakui Liu", grad: "PhD, SIOC, China", img: "https://www.catenane.net/images/current_members/Huakui.jpg" },
+  { name: "Jannik Lion Schiessl", grad: "MSci, Uni Ulm, Germany", img: "https://www.catenane.net/images/current_members/Jannic.jpg" },
+  { name: "Jessica Whittingham", grad: "MChem, University of Manchester, UK", img: "https://www.catenane.net/images/current_members/JessicaW.jpg" },
+  { name: "Joaquin Baixeras Buye", grad: "MSci, University of Cambridge, UK", img: "https://www.catenane.net/images/current_members/Quim.jpg" },
+  { name: "Linfeng Tan", grad: "MSc, Fudan University, China", img: "https://www.catenane.net/images/current_members/Linfeng.jpg" },
+  { name: "Lukas Marrow", grad: "MChem, University of Oxford, UK", img: "https://www.catenane.net/images/current_members/Lukas.jpg" },
+  { name: "Maria-Carmen Temian", grad: "MChem, University of Oxford, UK", img: "https://www.catenane.net/images/current_members/Maria.jpg" },
+  { name: "Dr Prodip Howlader", grad: "PhD, IISc Bangalore, India", img: "https://www.catenane.net/images/current_members/Prodip.jpg" },
+  { name: "Valerie Bruyr", grad: "Research Technician", img: "https://www.catenane.net/images/current_members/valerie.jpg" },
+  { name: "Lab Monkey", grad: "Honorary Researcher", img: "https://www.catenane.net/images/current_members/labmonkey.jpg" }
+];
+
+export const SHANGHAI_TEAM: TeamMember[] = [
+  { name: "Dr Peng Chen", grad: "PhD, East China Normal University, China", img: "https://www.catenane.net/images/current_members/ecnu/peng_web.jpg", email: "pchen@chem.ecnu.edu.cn" },
+  { name: "Dr Sujun Chen", grad: "PhD, East China University of Science and Technology, China", img: "https://www.catenane.net/images/current_members/ecnu/sujun_web.jpg", email: "sjchen@chem.ecnu.edu.cn" },
+  { name: "Dr Zhanhu Sun", grad: "PhD, RWTH Aachen University, Germany", img: "https://www.catenane.net/images/current_members/ecnu/Zhanhu_web.jpg", email: "zhsun@chem.ecnu.edu.cn" },
+  { name: "Dr Zhi-Hui Zhang", grad: "PhD, University of Southampton, UK", img: "https://www.catenane.net/images/current_members/ecnu/Peggyweb.jpg", email: "zhangzhihui@chem.ecnu.edu.cn" }
+];
+
 export const RESEARCH_DETAILS: Record<string, ProjectDetail> = {
   "gel-contraction": {
     slug: "gel-contraction",
@@ -85,7 +120,7 @@ export const RESEARCH_DETAILS: Record<string, ProjectDetail> = {
     narrativeTitle: "Va-Va-Voom at the Bottom",
     narrative: [
       "Richard Feynman was fascinated by extreme miniaturisation. We have taken this concept further by showing that a 26-atom biaryl compound is a catalysis-driven motor that continuously transduces energy from a chemical fuel to induce repetitive 360° directional rotation.",
-      "Upon treatment with a carbodiimide fuel, intramolecular anhydride formation between the rings and its subsequent hydrolysis occur incessantly. This discovery solves the long-standing problem of continuous directional rotation about a single covalent bond."
+      "Upon treatment with a carbodiimide fuel, intramolecular anhydride formation between the rings and its subsequent hydrolysis occur incessantly. Both reactions are directionally biased, meaning the motor rotates the rotor around the stator as long as fuel is present. This discovery solves the long-standing problem of continuous directional rotation about a single covalent bond."
     ],
     figures: [
       { type: 'image', url: "images/article_pictures/2022RotaryMotor/Feynman.png", caption: "Motors in miniature: From Feynman’s theoretical ratchet." },
